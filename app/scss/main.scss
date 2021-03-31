@@ -1,4 +1,7 @@
 @import "config";
+@import "header";
+@import "nav";
+@import "newsList";
 
 body {
   font-family: "Rubik";
@@ -6,10 +9,11 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 150%;
-  color: $text;
+  color: $black;
   position: relative;
   overflow-x: hidden;
   min-width: 320px;
+  background-color: $gray2;
 }
 
 .container {
@@ -77,6 +81,7 @@ body {
   }
 }
 
+// Checkbox
 .custom__checkbox {
   position: absolute;
   z-index: -1;
@@ -136,40 +141,263 @@ body {
   opacity: 0.5;
 }
 
-.select {
+// Select
+.exchange__select {
+  width: 100%;
+}
+
+.exchange__select {
   position: relative;
+  height: 49px;
+  user-select: none;
+  background: #fff;
+
+  &--active {
+    .exchange__select__body {
+      display: block;
+    }
+
+    .exchange__select__arrow {
+      transform: rotate(-180deg);
+    }
+  }
 }
 
-.select select {
-  display: block;
-  width: 100%; /* от ширины блока div */
-  padding: 0.75rem 2.5rem 0.75rem 1rem; /* отступы от текста до рамки */
-  background: none; /* убираем фон */
-  border: 1px solid #ccc; /* рамка */
-  border-radius: 3px; /* скругление полей формы */
-  -webkit-appearance: none; /* Chrome */
-  -moz-appearance: none; /* Firefox */
-  appearance: none; /* убираем дефолнтные стрелочки */
-  font-family: inherit; /* наследует от родителя */
-  font-size: 1rem;
-  color: #444;
+.exchange__select__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 49px;
+  border: 1px solid $gray;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  border-radius: 8px;
+  position: relative;
+
+  &:hover {
+    border-color: rgba($color: $gray, $alpha: 0.7);
+    .exchange__select__arrow {
+      opacity: 0.7;
+    }
+  }
 }
 
-.select:after {
-  content: "";
-  display: block;
-  border-style: solid;
-  border-width: 6px 5px 0 5px;
-  border-color: #000 transparent transparent transparent;
-  pointer-events: none;
+.exchange__select__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
+}
+
+.exchange__select__supt__title {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 12px;
+  margin-bottom: 2px;
+  color: $text2;
+}
+
+.exchange__select__arrow {
+  width: 14px;
+  height: 7px;
+  transition: all 0.2s linear;
   position: absolute;
+  right: 21px;
   top: 50%;
-  right: 1rem;
-  z-index: 1;
-  margin-top: -3px;
+  transform: translate(0, -50%);
+}
+
+.exchange__select__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.exchange__select__body {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  z-index: 5;
+  border-radius: 3px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.exchange__select__list {
+  border: 1px solid $gray;
+  background: #fff;
+  max-height: 170px;
+  overflow-y: scroll;
+  border-radius: 3px;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    width: 4px; /* 1 - вертикальный скроллбар */
+  }
+  &::-webkit-scrollbar {
+    &:horizontal {
+      height: 4px; /* 1 - горизонтальный скроллбар */
+    }
+  }
+  &::-webkit-scrollbar-button {
+    background: #fff; /* 2 - кнопка */
+  }
+  &::-webkit-scrollbar-track {
+    background: #fff; /* 3 - трек */
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: #fff; /* 4 – видимая часть трека */
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $blue;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-button:vertical:start:decrement {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-button:vertical:end:increment {
+    display: none;
+  }
+}
+
+.exchange__select__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 34px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
+  width: 100%;
+
+  &:hover {
+    color: $blue;
+    background: transparent;
+  }
+}
+
+// Titles
+.title_1 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.title_2 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.title_3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.title_4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.title_5 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+// Tags
+.tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tags__item {
+  display: inline-block;
+  margin-right: 4px;
+  padding: 2px 4px;
+  background: #60d9f9;
+  color: $white;
+  font-size: 8px;
+  line-height: 9px;
+  border: 1px solid #60d9f9;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background: transparent;
+    color: #60d9f9;
+  }
+
+  &--orange {
+    background: $orange;
+    border-color: $orange;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &--gray {
+    background: $text2;
+    border-color: $text2;
+
+    &:hover {
+      color: $text2;
+    }
+  }
+
+  &--green {
+    background: $green;
+    border-color: $green;
+
+    &:hover {
+      color: $green;
+    }
+  }
 }
 
 @media (max-width: $tablet) {
+  // Titles
+  .title_1 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .title_2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .title_3 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .title_4 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .title_5 {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 @media (max-width: $mobile) {

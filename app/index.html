@@ -6,8 +6,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- Slick -->
-	<!-- <link rel="stylesheet" href="./css/include/slick.css"> -->
+	<!-- Bootstrap Grid -->
+	<link rel="stylesheet" href="./css/include/bootstrap-grid.min.css">
+
+	<!-- Glider CSS -->
+	<link rel="stylesheet" href="./css/include/glider.min.css">
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="./css/app.min.css">
@@ -16,14 +19,308 @@
 
 <body>
 
+	<!-- Header -->
 	<header class="header" id="header">
 		<div class="container">
-			<!-- <a href="#" class="link">Применить</a>
+			<div class="header__inner">
+				<div class="header__left">
+					<a href="/" class="header__logo">
+						<img src="./images/dest/header/logo.svg" alt="Change">
+					</a>
+				</div>
+				<div class="header__center">
+					<!-- Nav -->
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">
+									Мониторинг
+								</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link--active">
+									Обменники
+								</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">
+									Конвертер валют
+								</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">
+									Новости
+								</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">
+									FAQ
+								</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">
+									Контакты
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- Nav END -->
+					<div class="header__info">
+						<div class="header__info__item">
+							<div class="header__info__title">
+								Обменников
+							</div>
+							<div class="header__info__value">
+								194
+							</div>
+						</div>
+						<div class="header__info__item">
+							<div class="header__info__title">
+								Направлений
+							</div>
+							<div class="header__info__value">
+								3 643
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__right">
+					<button class="header__add__btn">
+						<img src="./images/dest/header/add.svg" alt="add">
+					</button>
+					<a href="#" class="header__user">
+						<img src="./images/dest/header/avatar.png" alt="avatar" class="header__user__avatar">
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header END -->
+
+	<main class="main">
+
+		<!-- newslist -->
+		<section class="news__list">
+			<div class="container">
+				<div class="news__list__wrapper">
+					<div class="news__list__inner" id="newsListSlider">
+						<div class="news__list__item">
+							<img src="./images/dest/news__list/1.png" alt="news" class="news__list__img">
+							<div class="news__list__content">
+								<span class="news__list__date">
+									29.03.2021
+								</span>
+								<a href="#" class="news__list__title">
+									Новость дня!
+								</a>
+								<p class="news__list__description">
+									Мы запустилил новый сервис, с помощью которого ...
+								</p>
+								<div class="news__list__tags tags">
+									<a href="#" class="tags__item">
+										Важное
+									</a>
+									<a href="#" class="tags__item tags__item--orange">
+										Новинка
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="news__list__item">
+							<img src="./images/dest/news__list/2.png" alt="news" class="news__list__img">
+							<div class="news__list__content">
+								<span class="news__list__date">
+									29.03.2021
+								</span>
+								<a href="#" class="news__list__title">
+									Важные изменения
+								</a>
+								<p class="news__list__description">
+									В новое обновление мы включили ряд изменений и дополнений ...
+								</p>
+								<div class="news__list__tags tags">
+									<a href="#" class="tags__item">
+										Важное
+									</a>
+									<a href="#" class="tags__item tags__item--orange">
+										Новинка
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="news__list__item">
+							<img src="./images/dest/news__list/3.png" alt="news" class="news__list__img">
+							<div class="news__list__content">
+								<span class="news__list__date">
+									29.03.2021
+								</span>
+								<a href="#" class="news__list__title">
+									Для новичков
+								</a>
+								<p class="news__list__description">
+									Мы собрали полное руководство, как пользоваться нашим сервисом
+								</p>
+								<div class="news__list__tags tags">
+									<a href="#" class="tags__item">
+										Важное
+									</a>
+									<a href="#" class="tags__item tags__item--orange">
+										Новинка
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="news__list__item">
+							<img src="./images/dest/news__list/1.png" alt="news" class="news__list__img">
+							<div class="news__list__content">
+								<span class="news__list__date">
+									29.03.2021
+								</span>
+								<a href="#" class="news__list__title">
+									Новость дня!
+								</a>
+								<p class="news__list__description">
+									Мы запустилил новый сервис, с помощью которого ...
+								</p>
+								<div class="news__list__tags tags">
+									<a href="#" class="tags__item">
+										Важное
+									</a>
+									<a href="#" class="tags__item tags__item--orange">
+										Новинка
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="news__list__item">
+							<img src="./images/dest/news__list/2.png" alt="news" class="news__list__img">
+							<div class="news__list__content">
+								<span class="news__list__date">
+									29.03.2021
+								</span>
+								<a href="#" class="news__list__title">
+									Важные изменения
+								</a>
+								<p class="news__list__description">
+									В новое обновление мы включили ряд изменений и дополнений ...
+								</p>
+								<div class="news__list__tags tags">
+									<a href="#" class="tags__item">
+										Важное
+									</a>
+									<a href="#" class="tags__item tags__item--orange">
+										Новинка
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="news__list__item">
+							<img src="./images/dest/news__list/3.png" alt="news" class="news__list__img">
+							<div class="news__list__content">
+								<span class="news__list__date">
+									29.03.2021
+								</span>
+								<a href="#" class="news__list__title">
+									Для новичков
+								</a>
+								<p class="news__list__description">
+									Мы собрали полное руководство, как пользоваться нашим сервисом
+								</p>
+								<div class="news__list__tags tags">
+									<a href="#" class="tags__item">
+										Важное
+									</a>
+									<a href="#" class="tags__item tags__item--orange">
+										Новинка
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="news__list__arrow news__list__arrow--prev">
+						<img src="./images/dest/news__list/arrow.svg" alt="prev">
+					</button>
+					<button class="news__list__arrow news__list__arrow--next">
+						<img src="./images/dest/news__list/arrow.svg" alt="next">
+					</button>
+				</div>
+
+			</div>
+		</section>
+		<!-- newslist END -->
+
+
+	</main>
+
+	<footer class="footer" id="footer">
+		<div class="container">
+		</div>
+	</footer>
+
+	<!-- <a href="#" class="link">Применить</a>
 			<a href="#" class="btn">Применить</a>
 			<button class="btn">Применить</button>
 
 			<a href="#" class="btn btn--invert">Button</a>
 			<button class="btn btn--invert">Button</button> -->
+
+	<!-- <div class="exchange__select" style="width: 235px;">
+
+				<div class="exchange__select__head">
+					<span class="exchange__select__supt__title">
+						Обновление
+					</span>
+					<span class="exchange__select__title">
+						30 секунд
+					</span>
+
+
+					<img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+
+				</div>
+
+				<div class="exchange__select__body">
+					<div class="exchange__select__list">
+						<div class="exchange__select__item">
+							20 секунд
+						</div>
+
+						<div class="exchange__select__item">
+							30 секунд
+						</div>
+
+						<div class="exchange__select__item">
+							40 секунд
+						</div>
+
+						<div class="exchange__select__item">
+							50 секунд
+						</div>
+
+						<div class="exchange__select__item">
+							20 секунд
+						</div>
+
+						<div class="exchange__select__item">
+							30 секунд
+						</div>
+
+						<div class="exchange__select__item">
+							40 секунд
+						</div>
+
+						<div class="exchange__select__item">
+							50 секунд
+						</div>
+
+					</div>
+				</div>
+			</div>
 
 			<input type="checkbox" class="custom__checkbox" id="happy" name="happy" value="yes">
 			<label for="happy" class="custom__checkbox__label">Happy</label>
@@ -35,35 +332,11 @@
 			<label for="option_2" class="custom__checkbox__label">Happy</label>
 
 			<input type="radio" class="custom__checkbox custom__checkbox--radio" id="option_3" name="option" value="yes">
-			<label for="option_3" class="custom__checkbox__label">Happy</label>
+			<label for="option_3" class="custom__checkbox__label">Happy</label> -->
 
-			<div class="select">
-				<select>
-					<option value="Лимон">Лимон</option>
-					<option value="Банан">Банан</option>
-					<option value="Яблоко">Яблоко</option>
-				</select>
-			</div>
-		</div>
-	</header>
 
-	<main class="main">
-
-	</main>
-
-	<footer class="footer" id="footer">
-		<div class="container">
-		</div>
-	</footer>
-
-	<!-- jQuery -->
-	<script src="./js/include/jquery.min.js"></script>
-
-	<!-- jQuery maskedinput -->
-	<!-- <script src="./js/include/jquery.maskedinput.min.js"></script> -->
-
-	<!-- Slick -->
-	<!-- <script src="./js/include/slick.min.js"></script> -->
+	<!-- Glider Slider -->
+	<script src="./js/include/glider.min.js"></script>
 
 	<!-- Custom JS -->
 	<script src="./js/app.min.js"></script>

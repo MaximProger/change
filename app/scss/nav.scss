@@ -1,0 +1,32 @@
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav__item {
+  margin-right: 32px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: $black;
+  transition: all 0.2s linear;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &--active {
+    font-weight: 500;
+    color: $blue;
+  }
+}
