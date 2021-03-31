@@ -75,4 +75,65 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
+
+  // Фильтр
+  const filterBtn = document.querySelector("#openFilter");
+  if (filterBtn) {
+    filterBtn.addEventListener("click", (evt) => {
+      evt.preventDefault();
+
+      filterBtn.classList.toggle("tabs__btn--filter--active");
+
+      const tabsFilter = document.querySelector(".tabs__filter");
+      slideToggle(tabsFilter, 500);
+    });
+  }
+
+  // Трейд избранное
+  const tradeFaivoriteBtns = document.querySelectorAll(
+    ".trade__body__item__btn--faivorite"
+  );
+  if (tradeFaivoriteBtns) {
+    tradeFaivoriteBtns.forEach((tradeFaivoriteBtn) => {
+      tradeFaivoriteBtn.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        tradeFaivoriteBtn.classList.toggle(
+          "trade__body__item__btn--faivorite--active"
+        );
+      });
+    });
+  }
+
+  // Трейд Инфо
+  const tradePopups = document.querySelectorAll(".trade__popup");
+  const tradeInfoBtns = document.querySelectorAll(
+    ".trade__body__item__btn--info"
+  );
+
+  function closeTrades() {
+    tradePopups.forEach((tradePopup) => {
+      slideUp(tradePopup, 250);
+    });
+
+    tradeInfoBtns.forEach((tradeInfoBtn) => {
+      tradeInfoBtn.classList.remove("trade__body__item__btn--info--active");
+    });
+  }
+
+  if (tradeInfoBtns) {
+    tradeInfoBtns.forEach((tradeInfoBtn) => {
+      tradeInfoBtn.addEventListener("click", (evt) => {
+        evt.preventDefault();
+
+        tradeInfoBtn.classList.toggle("trade__body__item__btn--info--active");
+
+        const currTradeItem = findAncestor(
+          tradeInfoBtn,
+          "trade__body__item--exchanger"
+        );
+        const currPopup = currTradeItem.querySelector(".trade__popup");
+        slideToggle(currPopup, 250);
+      });
+    });
+  }
 });

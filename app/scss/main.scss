@@ -2,6 +2,8 @@
 @import "header";
 @import "nav";
 @import "newsList";
+@import "tabs";
+@import "trade";
 
 body {
   font-family: "Rubik";
@@ -14,6 +16,10 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background-color: $gray2;
+}
+
+strong {
+  font-weight: 500;
 }
 
 .container {
@@ -79,6 +85,24 @@ body {
       color: $white;
     }
   }
+
+  &--flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.btn__icon {
+  margin-right: 12px;
+}
+
+.text__green {
+  color: $green;
+}
+
+.text__red {
+  color: $red;
 }
 
 // Checkbox
@@ -140,13 +164,11 @@ body {
 .custom__checkbox:disabled:checked + .custom__checkbox__label::before {
   opacity: 0.5;
 }
+// Checkbox END
 
 // Select
 .exchange__select {
   width: 100%;
-}
-
-.exchange__select {
   position: relative;
   height: 49px;
   user-select: none;
@@ -173,12 +195,12 @@ body {
   border: 1px solid $gray;
   padding: 0 12px;
   cursor: pointer;
-  transition: all 0.2s linear;
+  transition: all 0.4s ease;
   border-radius: 8px;
   position: relative;
 
   &:hover {
-    border-color: rgba($color: $gray, $alpha: 0.7);
+    border-color: $blue;
     .exchange__select__arrow {
       opacity: 0.7;
     }
@@ -286,6 +308,7 @@ body {
     background: transparent;
   }
 }
+// Select END
 
 // Titles
 .title_1 {
@@ -318,6 +341,7 @@ body {
   line-height: 21px;
   text-transform: uppercase;
 }
+// Titles END
 
 // Tags
 .tags {
@@ -371,6 +395,78 @@ body {
     }
   }
 }
+// Tags END
+
+// Input
+.custon__input {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
+  height: 49px;
+  width: 100%;
+  border: 1px solid $gray;
+  border-radius: 8px;
+  padding-left: 16px;
+  transition: all 0.4s ease;
+
+  &::placeholder {
+    font: inherit;
+    color: $gray;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $blue;
+  }
+}
+// Input END
+
+// Messages
+.messages {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.messages__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  padding: 11.5px 8px;
+  background: rgba(1, 150, 114, 0.05);
+  border-radius: 8px;
+  color: $green;
+  margin-right: 12px;
+
+  &--red {
+    color: $red;
+    background: rgba(185, 2, 2, 0.05);
+
+    .messages__icon {
+      background: url("../images/dest/messages/red.svg") no-repeat center;
+    }
+  }
+
+  &--yellow {
+    color: $yellow;
+    background: rgba(248, 191, 32, 0.1);
+
+    .messages__icon {
+      background: url("../images/dest/messages/yellow.svg") no-repeat center;
+    }
+  }
+}
+
+.messages__icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8.75px;
+  background: url("../images/dest/messages/green.svg") no-repeat center;
+}
+// Messages END
 
 @media (max-width: $tablet) {
   // Titles
@@ -397,6 +493,21 @@ body {
   .title_5 {
     font-size: 16px;
     line-height: 19px;
+  }
+  // Titles END
+}
+
+.b-show {
+  display: block;
+  animation: showBlock 1s linear forwards;
+}
+
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
