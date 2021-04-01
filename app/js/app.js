@@ -258,4 +258,28 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // Трейд табы дабл
+  const doubleTabs = document.querySelectorAll(".trade__line--action");
+  if (doubleTabs) {
+    doubleTabs.forEach((doubleTab) => {
+      doubleTab.addEventListener("click", () => {
+        const wrapperDoubleTab = findAncestor(doubleTab, "trade__tab__wrapper");
+        wrapperDoubleTab.classList.toggle("trade__tab__wrapper--active");
+      });
+    });
+  }
+
+  const doubleTabBtns = document.querySelectorAll(".trade__tab__inner__btn");
+  if (doubleTabBtns) {
+    doubleTabBtns.forEach((doubleTabBtn) => {
+      doubleTabBtn.addEventListener("click", () => {
+        const currentWrapperDoubleTab = findAncestor(
+          doubleTabBtn,
+          "trade__tab__wrapper"
+        );
+        currentWrapperDoubleTab.classList.toggle("trade__tab__wrapper--active");
+      });
+    });
+  }
 });

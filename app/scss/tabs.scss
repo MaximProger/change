@@ -120,6 +120,12 @@
   &--active {
     display: block;
   }
+
+  &--calculator {
+    .tabs__filter__btn {
+      width: auto;
+    }
+  }
 }
 
 .tabs__filter__inner {
@@ -186,7 +192,8 @@
   margin-bottom: 30px;
 }
 
-.tabs__open__text {
+.link.tabs__open__text {
+  display: none;
   &--active {
     opacity: 0;
     pointer-events: none;
@@ -194,18 +201,59 @@
   }
 }
 
+.tabs__calculator__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.tabs__calculator__radio__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .custom__checkbox__item {
+    &:first-child {
+      margin-right: 24px;
+    }
+  }
+}
+
+.tabs__calculator__item {
+  margin: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &--double {
+    margin: 0 24px;
+  }
+}
+
+.tabs__calculator__value {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 8px;
+}
+
+.exchange__select.tabs__double__select {
+  max-width: 200px;
+
+  &:nth-child(1) {
+    margin-right: 24px;
+  }
+
+  &--first {
+    margin-right: 24px;
+  }
+}
+
 @media (max-width: $tablet) {
   .tabs {
     .container {
       padding: 0;
-    }
-
-    .tabs__nav__list {
-      width: 267px;
-      height: 48px;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      position: relative;
     }
 
     .tabs__nav__item {
@@ -220,28 +268,15 @@
     }
   }
 
-  .tabs__btns {
-    position: relative;
-
-    &::before {
-      content: "";
-      height: 100%;
-      width: 30px;
-      background: rgb(255, 255, 255);
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(250, 252, 255, 0.17440479609812676) 100%
-      );
-      z-index: 4;
-      position: absolute;
-      left: -32px;
-      top: 0;
-    }
-  }
-
   .tabs__filter {
     padding: 16px;
+
+    &--calculator {
+      .tabs__filter__btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 
   .tabs__filter__inner {
@@ -268,5 +303,87 @@
   .tabs__filter__btn {
     width: 100%;
     max-width: 100%;
+  }
+
+  .tabs__bot {
+    padding: 0 16px;
+  }
+
+  .tabs__title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 16px;
+  }
+
+  .tabs__text {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .link.tabs__open__text {
+    display: inline-block;
+  }
+
+  .tabs__calculator__wrapper {
+    flex-direction: column;
+  }
+
+  .tabs__calculator__radio__wrapper {
+    margin-bottom: 24px;
+    .custom__checkbox__item {
+      &:first-child {
+        margin-right: 48px;
+      }
+    }
+  }
+
+  .tabs__calculator__item {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 24px;
+
+    .tabs__filter__input {
+      width: 100% !important;
+      max-width: 100%;
+    }
+  }
+
+  .exchange__select.tabs__double__select {
+    max-width: 100%;
+    margin-bottom: 24px;
+
+    &--first {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .tabs__nav__list {
+    width: 267px;
+    height: 48px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+  }
+
+  .tabs__btns {
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 30px;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(250, 252, 255, 0.17440479609812676) 100%
+      );
+      z-index: 4;
+      position: absolute;
+      left: -32px;
+      top: 0;
+    }
   }
 }

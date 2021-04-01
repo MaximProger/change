@@ -6,6 +6,7 @@
 @import "trade";
 @import "footer";
 @import "popup";
+@import "calculator";
 
 body {
   font-family: "Rubik";
@@ -115,12 +116,24 @@ strong {
   }
 }
 
+.text__blue {
+  color: $blue;
+  transition: color 0.2s linear;
+}
+
 .text__green {
   color: $green;
+  transition: color 0.2s linear;
 }
 
 .text__red {
   color: $red;
+  transition: color 0.2s linear;
+}
+
+.text__text {
+  color: $text2;
+  transition: color 0.2s linear;
 }
 
 .mask {

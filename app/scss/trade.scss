@@ -1,3 +1,24 @@
+.trade {
+  &--double {
+    .trade__head {
+      grid-template-columns: 59.6% 18.2% 18.2%;
+    }
+
+    .trade__line {
+      grid-template-columns: 59.6% 18.2% 18.2%;
+    }
+
+    .trade__body__item__btn--info {
+      margin-left: 8px;
+    }
+
+    .trade__popup {
+      left: auto;
+      right: -245px;
+    }
+  }
+}
+
 .trade__table {
   background: $white;
   border-radius: 0 0 8px 8px;
@@ -55,6 +76,32 @@
 
   &:nth-child(odd) {
     background: #f8fbff;
+  }
+
+  &--except {
+    opacity: 0.2;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &--tab {
+    cursor: pointer;
+    transition: all 0.2s linear;
+    .text__blue {
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+
+  &--action {
+    &:hover {
+      background: $blue !important;
+      color: $white;
+
+      .text__text {
+        color: $white;
+      }
+    }
   }
 }
 
@@ -225,7 +272,108 @@
   line-height: 17px;
 }
 
+.trade__tab__inner__btn {
+  background: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.trade__tab__inner {
+  display: none;
+  position: relative;
+  .trade__line {
+    height: 41px;
+    background: #ebf1f9;
+    cursor: auto;
+
+    &:hover {
+      color: $black;
+
+      .text__text {
+        color: $text2;
+      }
+    }
+
+    .trade__body__item {
+      &--exchanger {
+        width: fit-content;
+      }
+    }
+  }
+}
+
+.trade__tab__wrapper {
+  &--active {
+    .trade__tab__inner {
+      display: block;
+    }
+
+    & > .trade__line {
+      background: $white;
+      &--action {
+        background: $blue !important;
+        color: $white;
+
+        .text__text {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+    .trade__line {
+      &--action {
+        background: #ebf1f9;
+      }
+    }
+  }
+}
+
+.trade__double__item__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 @media (max-width: $tablet) {
+  .trade {
+    &--double {
+      .trade__head {
+        grid-template-columns: 48% 26% 16%;
+      }
+
+      .trade__head__item {
+        justify-content: center;
+
+        &--exchanger {
+          justify-content: flex-start;
+        }
+      }
+
+      .trade__line {
+        &--action {
+          grid-template-columns: 48% 26% 16%;
+        }
+      }
+
+      .trade__popup {
+        right: auto;
+        left: 50px;
+        top: -5px;
+      }
+    }
+  }
+
   .trade__head {
     grid-template-columns: 37.3% 31.2% 31.5%;
     padding-bottom: 0;
@@ -245,10 +393,6 @@
       padding-left: 16px;
     }
 
-    &--give {
-      box-shadow: 26px 0px 40px -38px rgba(0, 0, 0, 0.1) inset;
-    }
-
     &--icon {
       justify-content: center;
     }
@@ -256,6 +400,27 @@
 
   .trade__line {
     grid-template-columns: 37.3% 31.2% 31.5%;
+
+    &--action {
+      height: 80px;
+
+      .trade__body__item {
+        &--exchanger {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+        }
+      }
+
+      .trade__body__double__text {
+        display: block;
+        margin-bottom: 5px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
   .trade__body__item {
@@ -276,10 +441,6 @@
       flex-direction: row;
       justify-content: flex-start;
     }
-
-    &--give {
-      box-shadow: 26px 0px 40px -38px rgba(0, 0, 0, 0.1) inset;
-    }
   }
 
   .trade__body__item__title {
@@ -292,22 +453,48 @@
     margin-bottom: 24px;
   }
 
-  .tabs__bot {
-    padding: 0 16px;
-  }
-
-  .tabs__title {
-    font-size: 18px;
-    line-height: 21px;
-    margin-bottom: 16px;
-  }
-
-  .tabs__text {
-    font-size: 16px;
-    line-height: 150%;
-  }
-
   .trade__popup__title {
     font-size: 18px;
+  }
+
+  .trade__tab__inner {
+    .trade__line {
+      grid-template-columns: auto;
+
+      .trade__body__item {
+        &--exchanger {
+          width: 85%;
+        }
+      }
+    }
+
+    .trade__body__double__text {
+      display: block;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .trade__double__item__wrapper {
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .trade__head__item {
+    &--give {
+      box-shadow: 26px 0px 40px -38px rgba(0, 0, 0, 0.1) inset;
+    }
+  }
+
+  .trade__head__item {
+    &--give {
+      box-shadow: 26px 0px 40px -38px rgba(0, 0, 0, 0.1) inset;
+    }
   }
 }
