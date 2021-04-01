@@ -264,7 +264,7 @@
           <div class="tabs__head__inner">
             <nav class="tabs__nav">
               <ul class="tabs__nav__list">
-                <li class="tabs__nav__item">
+                <li class="tabs__nav__item tabs__nav__item--active">
                   <a href="/" class="tabs__nav__link">
                     Курсы обмена
                   </a>
@@ -276,7 +276,7 @@
                   </a>
                 </li>
 
-                <li class="tabs__nav__item tabs__nav__item--active">
+                <li class="tabs__nav__item">
                   <a href="./stats.html" class="tabs__nav__link">
                     Статистика
                   </a>
@@ -309,120 +309,442 @@
 
         <div class="tabs__content">
           <!-- Trade -->
-          <div class="stats">
+          <div class="trade">
 
             <!-- Filter -->
-            <div class="tabs__filter tabs__filter--active tabs__filter--stats">
+            <div class="tabs__filter tabs__filter--trade">
               <div class="tabs__filter__inner">
+                <div class="exchange__select tabs__filter__select">
 
-                <div class="tabs__filter__stats__wrapper">
-                  <div class="exchange__select tabs__stats__select">
-
-                    <div class="exchange__select__head">
-                      <span class="exchange__select__supt__title">
-                        График
-                      </span>
-                      <span class="exchange__select__title">
-                        Популярные обмены
-                      </span>
+                  <div class="exchange__select__head">
+                    <span class="exchange__select__supt__title">
+                      Обновление
+                    </span>
+                    <span class="exchange__select__title">
+                      30 секунд
+                    </span>
 
 
-                      <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+                    <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
 
-                    </div>
-
-                    <div class="exchange__select__body">
-                      <div class="exchange__select__list">
-                        <div class="exchange__select__item">
-                          Популярные обмены
-                        </div>
-
-                        <div class="exchange__select__item">
-                          Популярные обмены
-                        </div>
-
-                        <div class="exchange__select__item">
-                          Популярные обмены
-                        </div>
-
-                      </div>
-                    </div>
                   </div>
 
-                  <div class="exchange__select tabs__stats__select">
-
-                    <div class="exchange__select__head">
-                      <span class="exchange__select__supt__title">
-                        Период
-                      </span>
-                      <span class="exchange__select__title">
-                        6 часов
-                      </span>
-
-
-                      <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
-
-                    </div>
-
-                    <div class="exchange__select__body">
-                      <div class="exchange__select__list">
-                        <div class="exchange__select__item">
-                          1 час
-                        </div>
-
-                        <div class="exchange__select__item">
-                          6 часов
-                        </div>
-
-                        <div class="exchange__select__item">
-                          10 часов
-                        </div>
+                  <div class="exchange__select__body">
+                    <div class="exchange__select__list">
+                      <div class="exchange__select__item">
+                        20 секунд
                       </div>
+
+                      <div class="exchange__select__item">
+                        30 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        40 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        50 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        20 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        30 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        40 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        50 секунд
+                      </div>
+
                     </div>
                   </div>
                 </div>
 
-                <a href="#" class="btn tabs__filter__btn">
+                <div class="exchange__select tabs__filter__select">
+
+                  <div class="exchange__select__head">
+                    <span class="exchange__select__supt__title">
+                      Обновление
+                    </span>
+                    <span class="exchange__select__title">
+                      30 секунд
+                    </span>
+
+
+                    <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+
+                  </div>
+
+                  <div class="exchange__select__body">
+                    <div class="exchange__select__list">
+                      <div class="exchange__select__item">
+                        20 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        30 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        40 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        50 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        20 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        30 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        40 секунд
+                      </div>
+
+                      <div class="exchange__select__item">
+                        50 секунд
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tabs__change">
+                  <input type="text" class="custon__input tabs__filter__input" id="value_1" name="value_1" value="WMZ"
+                    style="width: 150px;">
+                  <button type="button" class="tabse__change__btn">
+                    <span></span>
+                  </button>
+                  <input type="text" class="custon__input tabs__filter__input" id="value_2" name="value_2" value="BTC"
+                    style="width: 150px;">
+                </div>
+
+                <a href="#" class="btn btn--flex tabs__filter__btn">
+                  <img class="btn__icon" src="./images/dest/tabs/apply.svg" alt="apply">
                   Применить
                 </a>
+              </div>
+
+              <div class="messages tabs__filter__messages">
+                <span class="messages__item">
+                  <span class="messages__icon"></span>
+                  <span class="messages__text">
+                    WMZ > SBER > BTC выгоднее
+                  </span>
+                </span>
               </div>
             </div>
             <!-- Filter END -->
 
-            <div class="stats__content">
+            <div class="trade__table">
+              <div class="trade__head">
+                <div class="trade__head__item trade__head__item--exchanger">
+                  Обменник
+                </div>
 
-              <div class="canvas">
-                <svg class="chart" width="318" height="318" viewBox="0 0 50 50">
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                </svg>
+                <div class="trade__head__item trade__head__item--give trade__head__item--icon">
+                  Отдаете
+                  <img src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
+                </div>
+
+                <div class="trade__head__item trade__head__item--get trade__head__item--icon">
+                  Получаете
+                  <img src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
+                </div>
+
+                <div class="trade__head__item trade__head__item--reserve">
+                  Резерв
+                </div>
+
+                <div class="trade__head__item trade__head__item--reviews">
+                  Отзывы
+                </div>
               </div>
 
-              <div class="legend">
-                <ul class="caption-list">
-                  <li class="caption-item">Биткоин на Сбербанк <span class="caption-percent">45%</span></li>
-                  <li class="caption-item">Сбербанк на Биткоин <span class="caption-percent">29%</span></li>
-                  <li class="caption-item">Биткоин на Сбербанк <span class="caption-percent">45%</span></li>
-                  <li class="caption-item">Сбербанк на Биткоин <span class="caption-percent">29%</span></li>
-                  <li class="caption-item">Биткоин на Сбербанк <span class="caption-percent">45%</span></li>
-                  <li class="caption-item">Сбербанк на Биткоин <span class="caption-percent">29%</span></li>
-                  <li class="caption-item">Биткоин на Сбербанк <span class="caption-percent">45%</span></li>
-                  <li class="caption-item">Сбербанк на Биткоин <span class="caption-percent">29%</span></li>
-                  <li class="caption-item">Биткоин на Сбербанк <span class="caption-percent">45%</span></li>
-                  <li class="caption-item">Сбербанк на Биткоин <span class="caption-percent">29%</span></li>
-                </ul>
-              </div>
+              <div class="trade__body">
+                <div class="trade__line">
+                  <div class="trade__body__item trade__body__item--exchanger">
+                    <button class="trade__body__item__btn trade__body__item__btn--faivorite">
+                      <span></span>
+                    </button>
+                    <button class="trade__body__item__btn trade__body__item__btn--info">
+                      <span class="trade__body__info__icon"></span>
+                    </button>
+                    <span class="trade__body__item__title">
+                      Bittrend
+                    </span>
 
+                    <div class="trade__popup">
+                      <div class="trade__popup__head">
+                        <div class="trade__popup__country">
+                          Россия
+                        </div>
+                        <h4 class="trade__popup__title">
+                          Bittrend
+                        </h4>
+                        <div class="trade__popup__rating">
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item"></span>
+                        </div>
+                      </div>
+
+                      <div class="trade__popup__body">
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            Резерв
+                          </div>
+                          <div class="trade__popup__item__title">
+                            1 324 423
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            Возраст
+                          </div>
+                          <div class="trade__popup__item__title">
+                            3 года 2 мес
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            WebMoney BL
+                          </div>
+                          <div class="trade__popup__item__title">
+                            242
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            Perfect Money TS
+                          </div>
+                          <div class="trade__popup__item__title">
+                            0
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--give">
+                    1 BTC
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--get">
+                    <strong>4 245 274.04 RUB</strong> Сбербанк
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--reserve">
+                    <strong>1 568 652</strong>
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--reviews">
+                    <strong>
+                      <span class="text__red">28</span> / <span class="text__green">539</span>
+                    </strong>
+                  </div>
+                </div>
+
+                <div class="trade__line">
+                  <div class="trade__body__item trade__body__item--exchanger">
+                    <button class="trade__body__item__btn trade__body__item__btn--faivorite">
+                      <span></span>
+                    </button>
+                    <button class="trade__body__item__btn trade__body__item__btn--info">
+                      <span class="trade__body__info__icon"></span>
+                    </button>
+                    <span class="trade__body__item__title">
+                      CryptoMax
+                    </span>
+
+                    <div class="trade__popup">
+                      <div class="trade__popup__head">
+                        <div class="trade__popup__country">
+                          Россия
+                        </div>
+                        <h4 class="trade__popup__title">
+                          CryptoMax
+                        </h4>
+                        <div class="trade__popup__rating">
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item"></span>
+                        </div>
+                      </div>
+
+                      <div class="trade__popup__body">
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            Резерв
+                          </div>
+                          <div class="trade__popup__item__title">
+                            1 324 423
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            Возраст
+                          </div>
+                          <div class="trade__popup__item__title">
+                            3 года 2 мес
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            WebMoney BL
+                          </div>
+                          <div class="trade__popup__item__title">
+                            242
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            Perfect Money TS
+                          </div>
+                          <div class="trade__popup__item__title">
+                            0
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--give">
+                    <strong>4 245 274.04 RUB</strong> Сбербанк
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--get">
+                    1 BTC
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--reserve">
+                    <strong>2 643 652</strong>
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--reviews">
+                    <strong>
+                      <span class="text__red">0</span> / <span class="text__green">139</span>
+                    </strong>
+                  </div>
+                </div>
+
+                <div class="trade__line">
+                  <div class="trade__body__item trade__body__item--exchanger">
+                    <button class="trade__body__item__btn trade__body__item__btn--faivorite">
+                      <span></span>
+                    </button>
+                    <button class="trade__body__item__btn trade__body__item__btn--info">
+                      <span class="trade__body__info__icon"></span>
+                    </button>
+                    <span class="trade__body__item__title">
+                      Bittrend
+                    </span>
+
+                    <div class="trade__popup">
+                      <div class="trade__popup__head">
+                        <div class="trade__popup__country">
+                          Россия
+                        </div>
+                        <h4 class="trade__popup__title">
+                          Bittrend
+                        </h4>
+                        <div class="trade__popup__rating">
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                          <span class="trade__popup__rating__item"></span>
+                        </div>
+                      </div>
+
+                      <div class="trade__popup__body">
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            Резерв
+                          </div>
+                          <div class="trade__popup__item__title">
+                            1 324 423
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            Возраст
+                          </div>
+                          <div class="trade__popup__item__title">
+                            3 года 2 мес
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            WebMoney BL
+                          </div>
+                          <div class="trade__popup__item__title">
+                            242
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__item">
+                          <div class="trade__popup__item__suptitle">
+                            Perfect Money TS
+                          </div>
+                          <div class="trade__popup__item__title">
+                            0
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--give">
+                    1 BTC
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--get">
+                    <strong>4 245 274.04 RUB</strong> Сбербанк
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--reserve">
+                    <strong>1 568 652</strong>
+                  </div>
+
+                  <div class="trade__body__item trade__body__item--reviews">
+                    <strong>
+                      <span class="text__red">28</span> / <span class="text__green">539</span>
+                    </strong>
+                  </div>
+                </div>
+
+              </div>
             </div>
 
+            <div class="btn__wrapper">
+              <a href="#" class="btn btn--invert">
+                Загрузить еще
+              </a>
+            </div>
           </div>
           <!-- Trade END -->
         </div>
@@ -684,7 +1006,7 @@
   </div>
 
 
-  <div class="popup popup--cookie" style="display: none;">
+  <div class="popup popup--cookie">
     <div class="popup__cookie__inner">
       <div class="popup__cookie__left">
         <h3 class="popup__cookie__title">

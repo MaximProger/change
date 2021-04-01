@@ -282,4 +282,19 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // Диаграмма
+  const captionsList = document.querySelectorAll(".caption-item");
+  const unitsList = document.querySelectorAll(".unit");
+  if (captionsList) {
+    captionsList.forEach(function (item, index) {
+      item.addEventListener("mouseover", function () {
+        unitsList[index].classList.add("hovered");
+      });
+
+      item.addEventListener("mouseout", function () {
+        unitsList[index].classList.remove("hovered");
+      });
+    });
+  }
 });
