@@ -30,3 +30,23 @@
     color: $blue;
   }
 }
+
+@media (max-width: $tablet) {
+  .nav {
+    order: 2;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__item {
+    margin-right: 0;
+    margin-bottom: 5vh;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

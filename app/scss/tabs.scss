@@ -115,6 +115,7 @@
   padding: 24px;
   border-bottom: 1px solid $gray2;
   display: none;
+  background: $white;
 
   &--active {
     display: block;
@@ -183,4 +184,89 @@
 
 .tabs__text {
   margin-bottom: 30px;
+}
+
+.tabs__open__text {
+  &--active {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: $tablet) {
+  .tabs {
+    .container {
+      padding: 0;
+    }
+
+    .tabs__nav__list {
+      width: 267px;
+      height: 48px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      position: relative;
+    }
+
+    .tabs__nav__item {
+      padding: 0 16px;
+      height: auto;
+    }
+
+    .tabs__nav__link {
+      font-size: 14px;
+      line-height: 17px;
+      white-space: nowrap;
+    }
+  }
+
+  .tabs__btns {
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 30px;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(250, 252, 255, 0.17440479609812676) 100%
+      );
+      z-index: 4;
+      position: absolute;
+      left: -32px;
+      top: 0;
+    }
+  }
+
+  .tabs__filter {
+    padding: 16px;
+  }
+
+  .tabs__filter__inner {
+    flex-direction: column;
+  }
+
+  .tabs__filter__select {
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .tabs__filter__input {
+    width: 139px !important;
+  }
+
+  .tabs__change {
+    margin-bottom: 32px;
+  }
+
+  .tabse__change__btn {
+    margin: 0 16px;
+  }
+
+  .tabs__filter__btn {
+    width: 100%;
+    max-width: 100%;
+  }
 }

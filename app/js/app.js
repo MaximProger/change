@@ -183,6 +183,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Попапы
   const acceptCookieBtn = document.querySelector("#cookieAccept");
+  const menuBtn = document.querySelector("#menuToggle");
+  const menu = document.querySelector(".header__center");
+
   if (acceptCookieBtn) {
     acceptCookieBtn.addEventListener("click", (evt) => {
       evt.preventDefault();
@@ -196,13 +199,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const mask = document.querySelector(".mask");
   const body = document.querySelector("body");
 
-  function closePopup() {
+  function closeAll() {
     mask.classList.remove("mask--active");
     body.classList.remove("fixed");
     popups.forEach((popup) => {
       slideUp(popup, 200);
       popup.classList.remove("popup--active");
     });
+    menuBtn.classList.remove("header__burger--active");
+    menu.classList.remove("header__center--active");
   }
 
   function openPopup(popup) {
@@ -212,12 +217,12 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.add("fixed");
   }
 
-  mask.addEventListener("click", closePopup);
-
   if (popups) {
     popupCloseBtns.forEach((popupCloseBtn) => {
-      popupCloseBtn.addEventListener("click", closePopup);
+      popupCloseBtn.addEventListener("click", closeAll);
     });
+
+    mask.addEventListener("click", closeAll);
   }
 
   const openSettingsBtn = document.querySelector("#openSettings");
@@ -226,6 +231,31 @@ document.addEventListener("DOMContentLoaded", function () {
       evt.preventDefault();
       const popupSetting = document.querySelector("#popupSettings");
       openPopup(popupSetting);
+    });
+  }
+
+  // Меню
+  if (menuBtn) {
+    menuBtn.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      menuBtn.classList.toggle("header__burger--active");
+      menu.classList.toggle("header__center--active");
+      mask.classList.toggle("mask--active");
+      body.classList.toggle("fixed");
+    });
+  }
+
+  // Развернуть
+  const textOpenLinks = document.querySelectorAll(".tabs__open__text");
+  if (textOpenLinks) {
+    textOpenLinks.forEach((textOpenLink) => {
+      textOpenLink.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        const textParent = findAncestor(textOpenLink, "tabs__bot");
+        const hiddenText = textParent.querySelector(".tabs__text.no-md");
+        hiddenText.classList.remove("no-md");
+        textOpenLink.classList.add("tabs__open__text--active");
+      });
     });
   }
 });

@@ -82,6 +82,7 @@
   padding: 0;
   line-height: 1;
   cursor: pointer;
+  user-select: none;
 
   span {
     display: inline-block;
@@ -222,4 +223,91 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
+}
+
+@media (max-width: $tablet) {
+  .trade__head {
+    grid-template-columns: 37.3% 31.2% 31.5%;
+    padding-bottom: 0;
+  }
+
+  .trade__head__item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &--reserve,
+    &--reviews {
+      display: none;
+    }
+
+    &--exchanger {
+      padding-left: 16px;
+    }
+
+    &--give {
+      box-shadow: 26px 0px 40px -38px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    &--icon {
+      justify-content: center;
+    }
+  }
+
+  .trade__line {
+    grid-template-columns: 37.3% 31.2% 31.5%;
+  }
+
+  .trade__body__item {
+    font-size: 10px;
+    line-height: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &--reviews,
+    &--reserve {
+      display: none;
+    }
+
+    &--exchanger {
+      padding-left: 16px;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    &--give {
+      box-shadow: 26px 0px 40px -38px rgba(0, 0, 0, 0.1) inset;
+    }
+  }
+
+  .trade__body__item__title {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .trade__body {
+    padding-bottom: 0;
+    margin-bottom: 24px;
+  }
+
+  .tabs__bot {
+    padding: 0 16px;
+  }
+
+  .tabs__title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 16px;
+  }
+
+  .tabs__text {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .trade__popup__title {
+    font-size: 18px;
+  }
 }

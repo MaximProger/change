@@ -1,7 +1,7 @@
 .popup {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 8;
   background-color: $white;
   box-shadow: 0px 20px 20px rgba(87, 113, 240, 0.1);
   border-radius: 8px;
@@ -89,4 +89,52 @@
 
 .popup__settings__select {
   margin-bottom: 24px;
+}
+
+@media (max-width: $tablet) {
+  .popup {
+    &--settings {
+      max-width: 332px;
+    }
+
+    &--cookie {
+      max-width: 332px;
+    }
+  }
+
+  .popup__cookie__inner {
+    flex-direction: column;
+  }
+
+  .popup__cookie__left {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .popup__header {
+    margin-bottom: 24px;
+  }
+
+  .popup__text {
+    font-size: 12px;
+    line-height: 140%;
+  }
+
+  .popup__select__wrapper {
+    grid-template-columns: none;
+  }
+
+  .popup__settings__select {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 24px;
+    }
+  }
+
+  .popup__setting__btn {
+    width: 100%;
+  }
 }

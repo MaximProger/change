@@ -107,3 +107,30 @@
     }
   }
 }
+
+@media (max-width: $tablet) {
+  .news__list {
+    margin-bottom: 24px;
+
+    .container {
+      padding-right: 0;
+    }
+  }
+
+  .news__list__item {
+    width: 290px !important;
+    min-width: 290px !important;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 16px;
+    }
+  }
+
+  .news__list__arrow {
+    right: 16px;
+    &--prev {
+      left: 16px;
+    }
+  }
+}
