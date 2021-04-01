@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function closeTrades() {
     tradePopups.forEach((tradePopup) => {
-      slideUp(tradePopup, 250);
+      tradePopup.classList.remove("trade__popup--active");
     });
 
     tradeInfoBtns.forEach((tradeInfoBtn) => {
@@ -125,15 +125,107 @@ document.addEventListener("DOMContentLoaded", function () {
       tradeInfoBtn.addEventListener("click", (evt) => {
         evt.preventDefault();
 
-        tradeInfoBtn.classList.toggle("trade__body__item__btn--info--active");
-
         const currTradeItem = findAncestor(
           tradeInfoBtn,
           "trade__body__item--exchanger"
         );
         const currPopup = currTradeItem.querySelector(".trade__popup");
-        slideToggle(currPopup, 250);
+
+        if (
+          tradeInfoBtn.classList.contains(
+            "trade__body__item__btn--info--active"
+          )
+        ) {
+          tradeInfoBtn.classList.remove("trade__body__item__btn--info--active");
+          currPopup.classList.remove("trade__popup--active");
+        } else {
+          closeTrades();
+          tradeInfoBtn.classList.add("trade__body__item__btn--info--active");
+          currPopup.classList.add("trade__popup--active");
+        }
       });
+    });
+
+    document.onclick = function (evt) {
+      let hasActive = false;
+
+      let isPopup;
+
+      tradePopups.forEach((tradePopup) => {
+        if (tradePopup.classList.contains("trade__popup--active")) {
+          hasActive = true;
+        }
+
+        isPopup = evt.target == tradePopup || tradePopup.contains(evt.target);
+
+        if (
+          !isPopup &&
+          hasActive &&
+          !evt.target.classList.contains("trade__body__item__btn--info") &&
+          !evt.target.classList.contains("trade__body__info__icon")
+        ) {
+          closeTrades();
+        }
+      });
+    };
+  }
+
+  // Трейд сортировка
+  const tradeIconBtns = document.querySelectorAll(".trade__head__item--icon");
+  if (tradeIconBtns) {
+    tradeIconBtns.forEach((tradeIconBtn) => {
+      tradeIconBtn.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        tradeIconBtn.classList.toggle("trade__head__item--icon--active");
+      });
+    });
+  }
+
+  // Попапы
+  const acceptCookieBtn = document.querySelector("#cookieAccept");
+  if (acceptCookieBtn) {
+    acceptCookieBtn.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      const popupCookie = document.querySelector(".popup--cookie");
+      slideUp(popupCookie, 250);
+    });
+  }
+
+  const popupCloseBtns = document.querySelectorAll(".popup__close");
+  const popups = document.querySelectorAll(".popup");
+  const mask = document.querySelector(".mask");
+  const body = document.querySelector("body");
+
+  function closePopup() {
+    mask.classList.remove("mask--active");
+    body.classList.remove("fixed");
+    popups.forEach((popup) => {
+      slideUp(popup, 200);
+      popup.classList.remove("popup--active");
+    });
+  }
+
+  function openPopup(popup) {
+    slideDown(popup, 200);
+    popup.classList.add("popup--active");
+    mask.classList.add("mask--active");
+    body.classList.add("fixed");
+  }
+
+  mask.addEventListener("click", closePopup);
+
+  if (popups) {
+    popupCloseBtns.forEach((popupCloseBtn) => {
+      popupCloseBtn.addEventListener("click", closePopup);
+    });
+  }
+
+  const openSettingsBtn = document.querySelector("#openSettings");
+  if (openSettingsBtn) {
+    openSettingsBtn.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      const popupSetting = document.querySelector("#popupSettings");
+      openPopup(popupSetting);
     });
   }
 });

@@ -87,6 +87,7 @@
   border: 1px solid $gray2;
   cursor: pointer;
   transition: all 0.2s linear;
+  user-select: none;
 
   &.disabled {
     opacity: 0;

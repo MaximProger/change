@@ -1,5 +1,6 @@
 .trade__table {
   background: $white;
+  border-radius: 0 0 8px 8px;
 }
 
 .trade__head {
@@ -7,7 +8,6 @@
   width: 100%;
   display: grid;
   grid-template-columns: 24.5% 22.5% 22.5% 13.6% 13.6%;
-  align-items: flex-end;
   padding-bottom: 12px;
 }
 
@@ -16,12 +16,19 @@
   font-size: 12px;
   line-height: 14px;
   text-align: center;
+  align-self: flex-end;
 
   &--icon {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    &--active {
+      .trade__head__icon {
+        transform: rotate(-180deg);
+      }
+    }
   }
 
   &--exchanger {
@@ -35,12 +42,16 @@
   margin-left: 9.38px;
 }
 
+.trade__body {
+  padding-bottom: 55px;
+  margin-bottom: 41px;
+}
+
 .trade__line {
   height: 50px;
   width: 100%;
   display: grid;
   grid-template-columns: 24.5% 22.5% 22.5% 13.6% 13.6%;
-  align-items: center;
 
   &:nth-child(odd) {
     background: #f8fbff;
@@ -52,6 +63,7 @@
   font-size: 12px;
   line-height: 14px;
   text-align: center;
+  align-self: center;
 
   &--exchanger {
     text-align: left;
@@ -145,6 +157,7 @@
   padding: 16px;
   padding-bottom: 0;
   z-index: 2;
+  pointer-events: none;
 
   &--active {
     display: block;
