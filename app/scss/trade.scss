@@ -17,6 +17,16 @@
       right: -245px;
     }
   }
+
+  &--converter {
+    .trade__line {
+      grid-template-columns: 41% 19% 34%;
+    }
+
+    .trade__body {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .trade__table {
@@ -370,6 +380,18 @@
         right: auto;
         left: 50px;
         top: -5px;
+      }
+    }
+
+    &--converter {
+      .trade__line {
+        grid-template-columns: 42% 24% 29%;
+      }
+
+      .trade__body__item {
+        &--exchanger {
+          font-weight: 500;
+        }
       }
     }
   }

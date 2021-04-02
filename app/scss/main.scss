@@ -12,6 +12,9 @@
 @import "page";
 @import "news";
 @import "newsDetail";
+@import "faq";
+@import "converter";
+@import "contacts";
 
 body {
   font-family: "Rubik";
@@ -118,6 +121,10 @@ strong {
 
   &--right {
     justify-content: flex-end;
+  }
+
+  &--left {
+    justify-content: flex-start;
   }
 }
 
@@ -464,6 +471,9 @@ strong {
   transition: all 0.4s ease;
 
   &::placeholder {
+    font-family: "Rubik";
+    font-size: 14px;
+    line-height: 17px;
     font: inherit;
     color: $text2;
     font-weight: normal;
@@ -472,6 +482,15 @@ strong {
   &:focus,
   &:hover {
     border-color: $blue;
+    outline: none;
+  }
+
+  &--textarea {
+    font-family: "Rubik";
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 16px;
+    resize: none;
   }
 }
 // Input END

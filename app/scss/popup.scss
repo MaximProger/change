@@ -10,6 +10,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 500px;
 
   &--cookie {
     display: block;
@@ -27,6 +28,10 @@
 
   &--active {
     display: block;
+  }
+
+  &--faq {
+    max-width: 523px;
   }
 }
 
@@ -91,6 +96,22 @@
   margin-bottom: 24px;
 }
 
+.exchange__select.popup__faq__select {
+  margin-bottom: 24px;
+
+  .exchange__select__title {
+    color: $text2;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.custon__input.popup__textarea {
+  height: 155px;
+  margin-bottom: 24px;
+}
+
 @media (max-width: $tablet) {
   .popup {
     &--settings {
@@ -99,6 +120,10 @@
 
     &--cookie {
       max-width: 332px;
+    }
+
+    &--faq {
+      max-width: 328px;
     }
   }
 

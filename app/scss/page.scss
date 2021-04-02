@@ -82,6 +82,20 @@
 }
 
 @media (max-width: $tablet) {
+  .page {
+    &--converter {
+      .page__header {
+        padding: 0 12px;
+      }
+
+      .container {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
   .page__header {
     flex-direction: column;
     align-items: flex-start;

@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap Grid -->
+  <link rel="stylesheet" href="./css/include/bootstrap-grid.min.css">
+
+  <!-- Glider CSS -->
+  <link rel="stylesheet" href="./css/include/glider.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/app.min.css">
+  <title>Title</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__left">
+          <button type="button" class="header__burger no-xl md" id="menuToggle">
+            <span></span>
+          </button>
+          <a href="/" class="header__logo">
+            <img src="./images/dest/header/logo.svg" alt="Change">
+          </a>
+        </div>
+        <div class="header__center">
+          <!-- Nav -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  Мониторинг
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  Обменники
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link nav__link--active">
+                  Конвертер валют
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="./news.html" class="nav__link">
+                  Новости
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  FAQ
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Nav END -->
+          <div class="header__info">
+            <div class="header__info__item">
+              <div class="header__info__title">
+                Обменников
+              </div>
+              <div class="header__info__value">
+                194
+              </div>
+            </div>
+            <div class="header__info__item">
+              <div class="header__info__title">
+                Направлений
+              </div>
+              <div class="header__info__value">
+                3 643
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__right">
+          <button class="header__add__btn">
+            <img src="./images/dest/header/add.svg" alt="add">
+          </button>
+          <a href="#" class="header__user">
+            <img src="./images/dest/header/avatar.png" alt="avatar" class="header__user__avatar">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header END -->
+
+  <main class="main">
+
+    <!-- Page -->
+    <section class="page page--converter">
+      <div class="container">
+        <div class="page__header">
+          <div class="page__head__left">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs no-md">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="/" class="breadcrumbs__link link">
+                    Главная
+                  </a>
+                </li>
+
+                <li class="breadcrumbs__item breadcrumbs__item--special">
+                  <a href="#" class="breadcrumbs__link link">
+                    -
+                  </a>
+                </li>
+
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link link">
+                    Конвертер валют
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Breadcrumbs END -->
+            <h2 class="page__title">
+              Конвертер валют
+            </h2>
+          </div>
+        </div>
+
+        <div class="page__content">
+          <!-- Tabs -->
+          <div class="tabs tabs--converter">
+            <!-- Trade -->
+            <div class="trade trade--converter">
+
+              <!-- Filter -->
+              <div class="tabs__filter tabs__filter--active tabs__filter--converter">
+                <div class="tabs__filter__inner">
+                  <div class="tabs__converter__wrapper">
+                    <div class="tabs__converter__item">
+                      <div class="exchange__select tabs__converter__select">
+
+                        <div class="exchange__select__head">
+                          <span class="exchange__select__supt__title">
+                            Валюта
+                          </span>
+                          <span class="exchange__select__title">
+                            BTC
+                          </span>
+
+
+                          <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+
+                        </div>
+
+                        <div class="exchange__select__body">
+                          <div class="exchange__select__list">
+                            <div class="exchange__select__item">
+                              BTC
+                            </div>
+
+                            <div class="exchange__select__item">
+                              RUB
+                            </div>
+
+                            <div class="exchange__select__item">
+                              USD
+                            </div>
+
+                            <div class="exchange__select__item">
+                              EUR
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <input type="text" class="custon__input tabs__filter__input" id="value_1" name="value_1" value="1"
+                        style="width: 200px;">
+                    </div>
+
+                    <button type="button" class="tabse__change__btn">
+                      <span></span>
+                    </button>
+
+                    <div class="tabs__converter__item">
+                      <div class="exchange__select tabs__converter__select">
+
+                        <div class="exchange__select__head">
+                          <span class="exchange__select__supt__title">
+                            Валюта
+                          </span>
+                          <span class="exchange__select__title">
+                            RUB
+                          </span>
+
+
+                          <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+
+                        </div>
+
+                        <div class="exchange__select__body">
+                          <div class="exchange__select__list">
+                            <div class="exchange__select__item">
+                              BTC
+                            </div>
+
+                            <div class="exchange__select__item">
+                              RUB
+                            </div>
+
+                            <div class="exchange__select__item">
+                              USD
+                            </div>
+
+                            <div class="exchange__select__item">
+                              EUR
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <input type="text" class="custon__input tabs__filter__input" id="value_2" name="value_2"
+                        value="1 000 000" style="width: 200px;">
+                    </div>
+
+                  </div>
+
+
+                  <a href="#" class="btn tabs__converter__btn">
+                    Применить
+                  </a>
+                </div>
+              </div>
+              <!-- Filter END -->
+
+              <div class="trade__table">
+                <div class="trade__body">
+
+                  <div class="trade__line">
+                    <div class="trade__body__item trade__body__item--exchanger">
+                      Армянский драм
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--give">
+                      1 BTC
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--get">
+                      <span>27 830 536.31 <span class="text__text">AMD</span></span>
+                    </div>
+
+                  </div>
+
+                  <div class="trade__line">
+                    <div class="trade__body__item trade__body__item--exchanger">
+                      Армянский драм
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--give">
+                      1 BTC
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--get">
+                      <span>27 830 536.31 <span class="text__text">AMD</span></span>
+                    </div>
+
+                  </div>
+
+                  <div class="trade__line">
+                    <div class="trade__body__item trade__body__item--exchanger">
+                      Армянский драм
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--give">
+                      1 BTC
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--get">
+                      <span>27 830 536.31 <span class="text__text">AMD</span></span>
+                    </div>
+
+                  </div>
+
+                  <div class="trade__line">
+                    <div class="trade__body__item trade__body__item--exchanger">
+                      Армянский драм
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--give">
+                      1 BTC
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--get">
+                      <span>27 830 536.31 <span class="text__text">AMD</span></span>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- Trade END -->
+
+            <div class="tabs__bot">
+              <h2 class="tabs__title">
+                Для чего нужен конвертер?
+              </h2>
+              <p class="tabs__text">
+                На нашем конвертере вы можете узнать цену Bitcoin, получить ответ на вопрос, сколько стоит один
+                Satoshi или Bitcoin в самых разных валютах, сколько Сатоши в одном рубле, сколько гривен в одном
+                Биткоине. В калькуляторе доступно прямое и обратное преобразование – вы можете узнать сколько
+                нужно Сатоши или Биткоинов, чтобы купить одну единицу фиатной валюты USD, EUR, RUB, UAH, BYN,
+                KZT
+                и др. <a href="#" class="link tabs__open__text no-xl xs">Развернуть</a>
+              </p>
+
+              <p class="tabs__text no-md">
+                Мы включаем в мониторинг BestChange только надежные обменные пункты. В любом из них вы
+                гарантированно можете произвести обмен биткоинов по самым выгодным курсам.
+              </p>
+            </div>
+
+
+          </div>
+          <!-- Tabs END -->
+        </div>
+
+      </div>
+    </section>
+    <!-- Page END -->
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__right">
+          <span class="footer__copyright">
+            © 2021 Change
+          </span>
+          <a href="#" class="footer__link">
+            Условия & Конфиденциальность
+          </a>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav__list">
+            <li class="footer__nav__item">
+              <a href="#" class="footer__nav__link">
+                Новости
+              </a>
+            </li>
+            <li class="footer__nav__item">
+              <a href="#" class="footer__nav__link">
+                FAQ
+              </a>
+            </li>
+            <li class="footer__nav__item">
+              <a href="#" class="footer__nav__link">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer END -->
+
+  <!-- Popups -->
+  <div class="mask"></div>
+
+  <div class="popup popup--cookie" style="display: none;">
+    <div class="popup__cookie__inner">
+      <div class="popup__cookie__left">
+        <h3 class="popup__cookie__title">
+          Мы используем куки, чтобы пользоваться сайтом было удобно
+        </h3>
+        <a href="#" class="link popup__cookie__link">
+          Подробнее
+        </a>
+      </div>
+      <div class="popup__cookie__right">
+        <button type="button" class="btn popup__cookie__btn" id="cookieAccept">
+          Отлично!
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Popups END -->
+
+  <!-- Glider Slider -->
+  <script src="./js/include/glider.min.js"></script>
+
+  <!-- Анимации -->
+  <script src="./js/include/animation.js"></script>
+
+  <!-- Custom JS -->
+  <script src="./js/app.min.js"></script>
+</body>
+
+</html>

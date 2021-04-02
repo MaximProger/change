@@ -103,15 +103,15 @@
   <main class="main">
 
     <!-- Page -->
-    <section class="page">
+    <section class="page page--converter">
       <div class="container">
         <div class="page__header">
           <div class="page__head__left">
             <!-- Breadcrumbs -->
-            <div class="breadcrumbs">
+            <div class="breadcrumbs no-md">
               <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
-                  <a href="#" class="breadcrumbs__link link">
+                  <a href="/" class="breadcrumbs__link link">
                     Главная
                   </a>
                 </li>
@@ -124,96 +124,106 @@
 
                 <li class="breadcrumbs__item">
                   <a href="#" class="breadcrumbs__link link">
-                    Все новости
-                  </a>
-                </li>
-
-                <li class="breadcrumbs__item breadcrumbs__item--special">
-                  <a href="#" class="breadcrumbs__link link">
-                    -
-                  </a>
-                </li>
-
-                <li class="breadcrumbs__item">
-                  <a href="#" class="breadcrumbs__link link">
-                    Новости
+                    Контакты
                   </a>
                 </li>
               </ul>
             </div>
             <!-- Breadcrumbs END -->
             <h2 class="page__title">
-              Новость дня!
+              Контакты
             </h2>
-
-            <div class="page__info no-xl xs">
-              <div class="page__info__date text__text">12.12.2021</div>
-              <div class="page__info__author"><strong>Ivan Markov</strong></div>
-            </div>
-
-            <div class="page__subinfo">
-              <div class="page__rating">
-                <span class="page__rating__star page__rating__star--active"></span>
-                <span class="page__rating__star page__rating__star--active"></span>
-                <span class="page__rating__star page__rating__star--active"></span>
-                <span class="page__rating__star"></span>
-                <span class="page__rating__star"></span>
-              </div>
-              <div class="page__tags tags">
-                <a href="#" class="tags__item">
-                  Важное
-                </a>
-                <a href="#" class="tags__item tags__item--orange">
-                  Новинка
-                </a>
-              </div>
-            </div>
           </div>
 
-          <div class="page__info no-xs">
-            <div class="page__info__date text__text">12.12.2021</div>
-            <div class="page__info__author"><strong>Ivan Markov</strong></div>
-          </div>
         </div>
 
         <div class="page__content">
-          <!-- News Detail -->
-          <div class="news__detail">
-            <div class="news__detail__wrapper">
-              <img src="./images/dest/news__detail/news__img.png" alt="news" class="news__detail__img">
-              <div class="news__detail__content">
-                <p class="news__detail__description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna diam augue arcu vel. Pulvinar diam a
-                  justo, faucibus pellentesque enim id sem sit. Purus blandit non venenatis massa faucibus elementum
-                  auctor scelerisque. A lectus nullam gravida odio volutpat arcu, viverra. Risus nam diam eu urna nibh
-                  etiam felis vel in. Nisi fusce sagittis diam vitae sociis. Id lectus pellentesque lobortis venenatis
-                  urna quam facilisis. Commodo sit ornare netus fermentum, posuere. Feugiat nulla sit commodo enim.
-                  Feugiat adipiscing accumsan adipiscing pretium. Dui in mattis tortor enim, risus pharetra.
+          <!-- Contacts -->
+          <div class="contacts">
+            <div class="contacts__inner">
+              <div class="contacts__head">
+                <p class="contacts__text">
+                  Мы всегда рады ответить на интересующие вас вопросы и выслушать ваши предложения по улучшению сервиса.
+                  Также мы принимаем заявки на включение в листинг новых обменных пунктов.
                 </p>
-                <ul class="list">
-                  <li class="list__item">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li class="list__item">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li class="list__item">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li class="list__item">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                </ul>
+                <a href="#" class="link contacts__link">
+                  <img src="./images/dest/icons/mail.svg" alt="mail">
+                  example@mail.com
+                </a>
               </div>
-            </div>
 
-            <div class="btn__wrapper news__detail__btn__wrapper">
-              <a href="#" class="btn btn--invert">
-                Загрузить еще
-              </a>
+
+              <form name="contactsForm" id="contactsForm" class="contacts__form">
+                <div class="contacts__form__line">
+                  <input type="text" class="custon__input contacts__input" id="name" name="name" placeholder="Ваше имя"
+                    required>
+                  <input type="email" class="custon__input contacts__input" id="email" name="email"
+                    placeholder="Ваш email" required>
+                </div>
+
+                <div class="contacts__form__line">
+                  <div class="exchange__select contacts__select">
+
+                    <div class="exchange__select__head">
+                      <span class="exchange__select__supt__title">
+                        Тема
+                      </span>
+                      <span class="exchange__select__title">
+                        Добавление нового обменника
+                      </span>
+
+
+                      <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+
+                    </div>
+
+                    <div class="exchange__select__body">
+                      <div class="exchange__select__list">
+                        <div class="exchange__select__item">
+                          Добавление нового обменника
+                        </div>
+
+                        <div class="exchange__select__item">
+                          Добавление нового обменника
+                        </div>
+
+                        <div class="exchange__select__item">
+                          Добавление нового обменника
+                        </div>
+
+                        <div class="exchange__select__item">
+                          Добавление нового обменника
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="text" class="custon__input contacts__input" id="address" name="address"
+                    placeholder="Адрес сайта" required>
+                </div>
+
+                <div class="contacts__form__line">
+                  <textarea name="message" id="message" class="custon__input custon__input--textarea contacts__textarea"
+                    placeholder="Сообщение" required></textarea>
+                </div>
+
+                <div class="contacts__form__line">
+                  <div class="contacts__checkbox__item">
+                    <input type="checkbox" class="custom__checkbox" id="happy" name="happy" value="yes" checked
+                      required>
+                    <label for="happy" class="custom__checkbox__label">Даю согласие на <a href="#" class="link">
+                        Обработку персональных
+                        данных</a></label>
+                  </div>
+
+                  <button type="submit" class="btn contacts__btn">
+                    Отправить
+                  </button>
+                </div>
+
+              </form>
             </div>
           </div>
-          <!-- News Detail END -->
+          <!-- Contacts END -->
         </div>
 
       </div>

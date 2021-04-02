@@ -297,4 +297,29 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // FAQ
+  const faqHeaders = document.querySelectorAll(".faq__header");
+  if (faqHeaders) {
+    faqHeaders.forEach((faqHeader) => {
+      faqHeader.addEventListener("click", (evt) => {
+        evt.preventDefault();
+
+        const faqItem = findAncestor(faqHeader, "faq__item");
+        faqItem.classList.toggle("faq__item--active");
+
+        const faqContent = faqItem.querySelector(".faq__content");
+        slideToggle(faqContent, 500);
+      });
+    });
+  }
+
+  const askBtn = document.querySelector("#ask");
+  if (askBtn) {
+    askBtn.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      const faqPopup = document.querySelector("#popupFAQ");
+      openPopup(faqPopup);
+    });
+  }
 });
