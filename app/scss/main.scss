@@ -9,6 +9,9 @@
 @import "calculator";
 @import "stats";
 @import "diagramm";
+@import "page";
+@import "news";
+@import "newsDetail";
 
 body {
   font-family: "Rubik";
@@ -462,7 +465,8 @@ strong {
 
   &::placeholder {
     font: inherit;
-    color: $gray;
+    color: $text2;
+    font-weight: normal;
   }
 
   &:focus,
@@ -517,6 +521,69 @@ strong {
   background: url("../images/dest/messages/green.svg") no-repeat center;
 }
 // Messages END
+
+// Breadcrumbs
+.breadcrumbs {
+  margin-bottom: 8px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.breadcrumbs__item {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  &--special {
+    margin: 0 5px;
+
+    .breadcrumbs__link {
+      color: $black;
+      pointer-events: none;
+    }
+  }
+
+  &:last-child {
+    .breadcrumbs__link {
+      color: $black;
+      pointer-events: none;
+    }
+  }
+}
+// Breadcrumbs END
+
+// List
+.list__item {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: $text2;
+  margin-bottom: 16px;
+  position: relative;
+  padding-left: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background: linear-gradient(180deg, #5fd9f9 0%, #5771f0 100%), #c4c4c4;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+// List END
 
 @media (max-width: $tablet) {
   // Titles
