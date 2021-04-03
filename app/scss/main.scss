@@ -16,6 +16,7 @@
 @import "converter";
 @import "contacts";
 @import "cabinet";
+@import "exchenger";
 
 body {
   font-family: "Rubik";
@@ -164,6 +165,10 @@ strong {
   &--active {
     display: block;
   }
+}
+
+.hidden__text {
+  display: none;
 }
 
 // Checkbox

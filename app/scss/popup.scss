@@ -52,6 +52,14 @@
     }
   }
 
+  &--exchenger {
+    max-width: 555px;
+
+    .popup__special__item {
+      margin-bottom: 24px;
+    }
+  }
+
   &--special {
     padding: 32px;
 
@@ -266,6 +274,34 @@
   height: 155px;
 }
 
+.popup__inner__item__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.popup__radio__item {
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.popup__inner__suptitle {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  line-height: 17px;
+  color: $text2;
+  margin-bottom: 24px;
+}
+
+.popup__exchenger__btn {
+  width: 212px;
+}
+
 @media (max-width: $tablet) {
   .popup {
     &--settings {
@@ -292,6 +328,14 @@
       padding: 16px;
       overflow-y: scroll;
       overflow-x: hidden;
+    }
+
+    &--exchenger {
+      display: none;
+      max-width: 328px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
 
     &--registration {
@@ -369,5 +413,28 @@
       .contacts__checkbox__item {
       }
     }
+  }
+
+  .popup__inner__item__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .popup__radio__item {
+    margin-right: 0;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .exchange__recall__form__stars {
+    margin-bottom: 24px;
+  }
+
+  .popup__exchenger__btn {
+    width: 100%;
   }
 }

@@ -384,4 +384,78 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
+
+  // Рейтинг в форме
+  const recallStars = document.querySelectorAll(
+    ".exchange__recall__form__star"
+  );
+  if (recallStars) {
+    recallStars.forEach((recallStar) => {
+      recallStar.addEventListener("click", () => {
+        recallStars.forEach((recallStar) => {
+          recallStar.classList.remove("exchange__recall__form__star--active");
+        });
+
+        recallStar.classList.add("exchange__recall__form__star--active");
+
+        if (recallStar.classList.contains("exchange__recall__form__star--1")) {
+          recallStars.forEach((recallStar) => {
+            recallStar.classList.add("exchange__recall__form__star--active");
+          });
+        } else if (
+          recallStar.classList.contains("exchange__recall__form__star--2")
+        ) {
+          document
+            .querySelector(".exchange__recall__form__star--3")
+            .classList.add("exchange__recall__form__star--active");
+          document
+            .querySelector(".exchange__recall__form__star--4")
+            .classList.add("exchange__recall__form__star--active");
+          document
+            .querySelector(".exchange__recall__form__star--5")
+            .classList.add("exchange__recall__form__star--active");
+        } else if (
+          recallStar.classList.contains("exchange__recall__form__star--3")
+        ) {
+          document
+            .querySelector(".exchange__recall__form__star--4")
+            .classList.add("exchange__recall__form__star--active");
+          document
+            .querySelector(".exchange__recall__form__star--5")
+            .classList.add("exchange__recall__form__star--active");
+        } else if (
+          recallStar.classList.contains("exchange__recall__form__star--4")
+        ) {
+          document
+            .querySelector(".exchange__recall__form__star--5")
+            .classList.add("exchange__recall__form__star--active");
+        } else {
+        }
+      });
+    });
+  }
+
+  const addReviewBtn = document.querySelector("#addReview");
+  if (addReview) {
+    addReview.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      const reviewPopup = document.querySelector("#popupExchenger");
+      openPopup(reviewPopup);
+    });
+  }
+
+  // Показать текст
+  const showTextBtns = document.querySelectorAll(".show__text");
+  if (showTextBtns) {
+    showTextBtns.forEach((showTextBtn) => {
+      showTextBtn.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        const textBlock = findAncestor(showTextBtn, "text");
+        const hiddenText = textBlock.querySelector("span.hidden__text");
+        console.log(hiddenText);
+        hiddenText.classList.remove("hidden__text");
+        showTextBtn.remove();
+      });
+    });
+  }
 });
