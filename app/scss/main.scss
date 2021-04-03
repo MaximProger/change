@@ -15,6 +15,7 @@
 @import "faq";
 @import "converter";
 @import "contacts";
+@import "cabinet";
 
 body {
   font-family: "Rubik";
@@ -469,6 +470,7 @@ strong {
   border-radius: 8px;
   padding-left: 16px;
   transition: all 0.4s ease;
+  background: $white;
 
   &::placeholder {
     font-family: "Rubik";
@@ -492,7 +494,95 @@ strong {
     padding-top: 16px;
     resize: none;
   }
+
+  &--password {
+    padding-right: 42px;
+    -webkit-text-security: disc;
+  }
 }
+
+.custom__file__plug {
+  border: 1px dashed $blue;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 120px;
+  height: 121px;
+  background: $gray2;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  transition: all 0.2s linear;
+
+  &:hover {
+    border: 1px solid $blue;
+  }
+
+  &--active {
+    .custom__file__outimg {
+      display: block;
+    }
+
+    .custom__file__label {
+      z-index: 5;
+      opacity: 0;
+    }
+  }
+
+  &--cabinet {
+    margin-right: 32px;
+    background: url("../images/dest/pages/avatar__bg.png") no-repeat center;
+
+    .custom__file__img {
+      position: absolute;
+      bottom: 13px;
+      right: 13px;
+    }
+  }
+}
+
+.custom__file__plug--cabinet.custom__file__plug--active {
+  background: transparent;
+}
+
+.custom__file__text {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 17px;
+  color: $text2;
+}
+
+.custom__input__file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.custom__file__label {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom__file__outimg {
+  display: none;
+  height: auto;
+  width: 100%;
+  max-width: 119px;
+  max-height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: scale-down;
+  z-index: 1;
+}
+
 // Input END
 
 // Messages
@@ -536,6 +626,8 @@ strong {
   display: inline-block;
   width: 20px;
   height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   margin-right: 8.75px;
   background: url("../images/dest/messages/green.svg") no-repeat center;
 }
@@ -638,6 +730,17 @@ strong {
     width: 100%;
   }
   // Messages END
+
+  // Input
+  .custom__file__plug {
+    &--cabinet {
+      width: 98px;
+      height: 98px;
+      min-width: 98px;
+      min-height: 98px;
+    }
+  }
+  // Input END
 }
 
 @media (max-width: $mobile) {

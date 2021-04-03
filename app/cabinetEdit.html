@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap Grid -->
+  <link rel="stylesheet" href="./css/include/bootstrap-grid.min.css">
+
+  <!-- Glider CSS -->
+  <link rel="stylesheet" href="./css/include/glider.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/app.min.css">
+  <title>Title</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__left">
+          <button type="button" class="header__burger no-xl md" id="menuToggle">
+            <span></span>
+          </button>
+          <a href="/" class="header__logo">
+            <img src="./images/dest/header/logo.svg" alt="Change">
+          </a>
+        </div>
+        <div class="header__center">
+          <!-- Nav -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  Мониторинг
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  Обменники
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  Конвертер валют
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="./news.html" class="nav__link nav__link--active">
+                  Новости
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  FAQ
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Nav END -->
+          <div class="header__info">
+            <div class="header__info__item">
+              <div class="header__info__title">
+                Обменников
+              </div>
+              <div class="header__info__value">
+                194
+              </div>
+            </div>
+            <div class="header__info__item">
+              <div class="header__info__title">
+                Направлений
+              </div>
+              <div class="header__info__value">
+                3 643
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__right">
+          <button class="header__add__btn">
+            <img src="./images/dest/header/add.svg" alt="add">
+          </button>
+          <a href="#" class="header__user">
+            <img src="./images/dest/header/avatar.png" alt="avatar" class="header__user__avatar">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header END -->
+
+  <main class="main">
+
+    <!-- Page -->
+    <section class="page">
+      <div class="container">
+        <div class="page__header">
+          <div class="page__head__left">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="/" class="breadcrumbs__link link">
+                    Главная
+                  </a>
+                </li>
+
+                <li class="breadcrumbs__item breadcrumbs__item--special">
+                  <a href="#" class="breadcrumbs__link link">
+                    -
+                  </a>
+                </li>
+
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link link">
+                    Личный кабинет
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Breadcrumbs END -->
+            <h2 class="page__title">
+              Личный кабинет
+            </h2>
+          </div>
+
+        </div>
+
+        <div class="page__content">
+          <!-- Cabinet -->
+          <div class="cabinet">
+
+            <div class="cabinet__top__wrapper">
+              <form action="/" class="cabinet__form" name="cabinetForm" id="cabinetFrom">
+                <div class="cabinet__top">
+                  <div class="cabinet__top__left">
+
+                    <div class="cabinet__top__wrapper">
+                      <div class="custom__file__plug custom__file__plug--cabinet">
+                        <label for="avatar" class="custom__file__label">
+                          <img src="./images/dest/icons/load.svg" alt="load" class="custom__file__img">
+                        </label>
+                        <img src="./images/dest/icons/avatar.svg" alt="preview" class="custom__file__outimg">
+                        <input type="file" name="avatar" id="avatar" class="custom__input__file" required>
+                      </div>
+
+                      <div class="cabinet__top__item cabinet__top__item--input">
+
+                        <div class="cabinet__top__box cabinet__top__box--input">
+                          <div class="cabinet__top__suptitle">
+                            Имя
+                          </div>
+                          <input type="text" class="custon__input cabinet__top__input" id="name" name="name"
+                            value="Константин" required>
+                        </div>
+
+                        <div class="cabinet__top__box cabinet__top__box--input">
+                          <div class="cabinet__top__suptitle">
+                            Email
+                          </div>
+                          <input type="email" class="custon__input cabinet__top__input" id="email" name="email"
+                            value="kostya@mail.com" required>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+
+                    <div class="cabinet__top__item cabinet__top__item--input">
+
+                      <div class="cabinet__top__box cabinet__top__box--input">
+                        <input type="password" class="custon__input cabinet__top__input cabinet__top__input--special"
+                          id="password" name="password" placeholder="Новый пароль" required>
+                      </div>
+
+                      <div class="cabinet__top__box cabinet__top__box--input">
+                        <input type="password" class="custon__input cabinet__top__input cabinet__top__input--special"
+                          id="password_2" name="password_2" placeholder="Повторите пароль" required>
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+                  <div class="cabinet__top__right cabinet__top__right--edit">
+                    <div class="cabinet__btn__wrapper">
+                      <button type="submit" class="btn cabinet__submit">Сохранить</button>
+                      <a href="./cabinet.html" class="link cabinet__cancel">
+                        Отмена
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+
+            <section class="cabinet__programm">
+              <h2 class="cabinet__programm__title">Реферальная программа</h2>
+              <h3 class="cabinet__programm__subtitle">За посещение каждым уникальным посетителем вы будете получать</h3>
+              <div class="cabinet__programm__visit">
+                <div class="cabinet__programm__visit__wrapper" id="cabinetVisit">
+
+                  <div class="cabinet__programm__visit__item">
+                    <input type="radio" class="custom__checkbox custom__checkbox--radio" id="option_1" name="option"
+                      value="yes" checked>
+                    <label for="option_1" class="custom__checkbox__label">0,04$</label>
+                    <span class="cabinet__programm__visit__text">Первое
+                      посещение</span>
+                  </div>
+
+                  <div class="cabinet__programm__visit__item">
+                    <input type="radio" class="custom__checkbox custom__checkbox--radio" id="option_2" name="option"
+                      value="yes">
+                    <label for="option_2" class="custom__checkbox__label">0,1$</label>
+                    <span class="cabinet__programm__visit__text">Через
+                      3 дня</span>
+                  </div>
+
+                  <div class="cabinet__programm__visit__item">
+                    <input type="radio" class="custom__checkbox custom__checkbox--radio" id="option_3" name="option"
+                      value="yes">
+                    <label for="option_3" class="custom__checkbox__label">0,1$</label>
+                    <span class="cabinet__programm__visit__text">Через 7 дней</span>
+                  </div>
+
+                  <div class="cabinet__programm__visit__item">
+                    <input type="radio" class="custom__checkbox custom__checkbox--radio" id="option_4" name="option"
+                      value="yes">
+                    <label for="option_4" class="custom__checkbox__label">0,1$</label>
+                    <span class="cabinet__programm__visit__text">Через
+                      30 дней</span>
+                  </div>
+
+                  <div class="cabinet__programm__visit__item">
+                    <input type="radio" class="custom__checkbox custom__checkbox--radio" id="option_5" name="option"
+                      value="yes">
+                    <label for="option_5" class="custom__checkbox__label">0,2$</label>
+                    <span class="cabinet__programm__visit__text">Через
+                      90 дней</span>
+                  </div>
+
+                  <div class="cabinet__programm__visit__item">
+                    <input type="radio" class="custom__checkbox custom__checkbox--radio" id="option_6" name="option"
+                      value="yes">
+                    <label for="option_6" class="custom__checkbox__label">0,4$</label>
+                    <span class="cabinet__programm__visit__text">Через
+                      180 дней</span>
+                  </div>
+
+                </div>
+
+                <button class="cabinet__programm__arrow cabinet__programm__arrow--prev">
+                  <img src="./images/dest/news__list/arrow.svg" alt="prev">
+                </button>
+                <button class="cabinet__programm__arrow cabinet__programm__arrow--next">
+                  <img src="./images/dest/news__list/arrow.svg" alt="next">
+                </button>
+
+              </div>
+              <div class="messages cabinet__messages">
+                <span class="messages__item">
+                  <span class="messages__icon"></span>
+                  <span class="messages__text">
+                    Вы автоматически получите <span class="cabinet__messages__accent">+0,2$</span> за каждого
+                    пользователя,
+                    который совершит обмен и получит кэшбек
+                  </span>
+                </span>
+              </div>
+              <h2 class="cabinet__programm__title cabinet__programm__title--second">От привлеченных пользователей,
+                зарегистрированных<br>
+                в партнерской программе, вы получите:</h2>
+              <div class="cabinet_benefits">
+                <div class="cabinet_benefits__item">
+                  +30% от дохода рефералов 1 уровня<br>
+                  (<span class="text__text">вы — партнер</span>)
+                </div>
+                <div class="cabinet_benefits__item">
+                  +10% от дохода рефералов 2 уровня<br>
+                  (<span class="text__text">вы — партнер — партнер</span>)
+                </div>
+              </div>
+            </section>
+
+            <section class="cabinet__faivorites">
+
+              <div class="cabinet__faivorites__header">
+                <h2 class="cabinet__faivorites__title">
+                  Избранные обменники
+                </h2>
+              </div>
+
+              <div class="trade__table">
+                <div class="trade__head">
+                  <div class="trade__head__item trade__head__item--exchanger">
+                    Обменник
+                  </div>
+
+                  <div class="trade__head__item trade__head__item--give trade__head__item--icon">
+                    Отдаете
+                    <img src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
+                  </div>
+
+                  <div class="trade__head__item trade__head__item--get trade__head__item--icon">
+                    Получаете
+                    <img src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
+                  </div>
+
+                  <div class="trade__head__item trade__head__item--reserve">
+                    Резерв
+                  </div>
+
+                  <div class="trade__head__item trade__head__item--reviews">
+                    Отзывы
+                  </div>
+                </div>
+
+                <div class="trade__body">
+                  <div class="trade__line">
+                    <div class="trade__body__item trade__body__item--exchanger">
+                      <button class="trade__body__item__btn trade__body__item__btn--faivorite">
+                        <span></span>
+                      </button>
+                      <button class="trade__body__item__btn trade__body__item__btn--info">
+                        <span class="trade__body__info__icon"></span>
+                      </button>
+                      <span class="trade__body__item__title">
+                        Bittrend
+                      </span>
+
+                      <div class="trade__popup">
+                        <div class="trade__popup__head">
+                          <div class="trade__popup__country">
+                            Россия
+                          </div>
+                          <h4 class="trade__popup__title">
+                            Bittrend
+                          </h4>
+                          <div class="trade__popup__rating">
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item"></span>
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__body">
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              Резерв
+                            </div>
+                            <div class="trade__popup__item__title">
+                              1 324 423
+                            </div>
+                          </div>
+
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              Возраст
+                            </div>
+                            <div class="trade__popup__item__title">
+                              3 года 2 мес
+                            </div>
+                          </div>
+
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              WebMoney BL
+                            </div>
+                            <div class="trade__popup__item__title">
+                              242
+                            </div>
+                          </div>
+
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              Perfect Money TS
+                            </div>
+                            <div class="trade__popup__item__title">
+                              0
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--give">
+                      1 BTC
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--get">
+                      <strong>4 245 274.04 RUB</strong> Сбербанк
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--reserve">
+                      <strong>1 568 652</strong>
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--reviews">
+                      <strong>
+                        <span class="text__red">28</span> / <span class="text__green">539</span>
+                      </strong>
+                    </div>
+                  </div>
+
+                  <div class="trade__line">
+                    <div class="trade__body__item trade__body__item--exchanger">
+                      <button class="trade__body__item__btn trade__body__item__btn--faivorite">
+                        <span></span>
+                      </button>
+                      <button class="trade__body__item__btn trade__body__item__btn--info">
+                        <span class="trade__body__info__icon"></span>
+                      </button>
+                      <span class="trade__body__item__title">
+                        CryptoMax
+                      </span>
+
+                      <div class="trade__popup">
+                        <div class="trade__popup__head">
+                          <div class="trade__popup__country">
+                            Россия
+                          </div>
+                          <h4 class="trade__popup__title">
+                            CryptoMax
+                          </h4>
+                          <div class="trade__popup__rating">
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item"></span>
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__body">
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              Резерв
+                            </div>
+                            <div class="trade__popup__item__title">
+                              1 324 423
+                            </div>
+                          </div>
+
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              Возраст
+                            </div>
+                            <div class="trade__popup__item__title">
+                              3 года 2 мес
+                            </div>
+                          </div>
+
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              WebMoney BL
+                            </div>
+                            <div class="trade__popup__item__title">
+                              242
+                            </div>
+                          </div>
+
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              Perfect Money TS
+                            </div>
+                            <div class="trade__popup__item__title">
+                              0
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--give">
+                      <strong>4 245 274.04 RUB</strong> Сбербанк
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--get">
+                      1 BTC
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--reserve">
+                      <strong>2 643 652</strong>
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--reviews">
+                      <strong>
+                        <span class="text__red">0</span> / <span class="text__green">139</span>
+                      </strong>
+                    </div>
+                  </div>
+
+                  <div class="trade__line">
+                    <div class="trade__body__item trade__body__item--exchanger">
+                      <button class="trade__body__item__btn trade__body__item__btn--faivorite">
+                        <span></span>
+                      </button>
+                      <button class="trade__body__item__btn trade__body__item__btn--info">
+                        <span class="trade__body__info__icon"></span>
+                      </button>
+                      <span class="trade__body__item__title">
+                        Bittrend
+                      </span>
+
+                      <div class="trade__popup">
+                        <div class="trade__popup__head">
+                          <div class="trade__popup__country">
+                            Россия
+                          </div>
+                          <h4 class="trade__popup__title">
+                            Bittrend
+                          </h4>
+                          <div class="trade__popup__rating">
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item trade__popup__rating__item--active"></span>
+                            <span class="trade__popup__rating__item"></span>
+                          </div>
+                        </div>
+
+                        <div class="trade__popup__body">
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              Резерв
+                            </div>
+                            <div class="trade__popup__item__title">
+                              1 324 423
+                            </div>
+                          </div>
+
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              Возраст
+                            </div>
+                            <div class="trade__popup__item__title">
+                              3 года 2 мес
+                            </div>
+                          </div>
+
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              WebMoney BL
+                            </div>
+                            <div class="trade__popup__item__title">
+                              242
+                            </div>
+                          </div>
+
+                          <div class="trade__popup__item">
+                            <div class="trade__popup__item__suptitle">
+                              Perfect Money TS
+                            </div>
+                            <div class="trade__popup__item__title">
+                              0
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--give">
+                      1 BTC
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--get">
+                      <strong>4 245 274.04 RUB</strong> Сбербанк
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--reserve">
+                      <strong>1 568 652</strong>
+                    </div>
+
+                    <div class="trade__body__item trade__body__item--reviews">
+                      <strong>
+                        <span class="text__red">28</span> / <span class="text__green">539</span>
+                      </strong>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- Cabinet END -->
+        </div>
+
+      </div>
+    </section>
+    <!-- Page END -->
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__right">
+          <span class="footer__copyright">
+            © 2021 Change
+          </span>
+          <a href="#" class="footer__link">
+            Условия & Конфиденциальность
+          </a>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav__list">
+            <li class="footer__nav__item">
+              <a href="#" class="footer__nav__link">
+                Новости
+              </a>
+            </li>
+            <li class="footer__nav__item">
+              <a href="#" class="footer__nav__link">
+                FAQ
+              </a>
+            </li>
+            <li class="footer__nav__item">
+              <a href="#" class="footer__nav__link">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer END -->
+
+  <!-- Popups -->
+  <div class="mask"></div>
+
+  <div class="popup popup--cookie" style="display: none;">
+    <div class="popup__cookie__inner">
+      <div class="popup__cookie__left">
+        <h3 class="popup__cookie__title">
+          Мы используем куки, чтобы пользоваться сайтом было удобно
+        </h3>
+        <a href="#" class="link popup__cookie__link">
+          Подробнее
+        </a>
+      </div>
+      <div class="popup__cookie__right">
+        <button type="button" class="btn popup__cookie__btn" id="cookieAccept">
+          Отлично!
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Popups END -->
+
+  <!-- Glider Slider -->
+  <script src="./js/include/glider.min.js"></script>
+
+  <!-- Анимации -->
+  <script src="./js/include/animation.js"></script>
+
+  <!-- Custom JS -->
+  <script src="./js/app.min.js"></script>
+</body>
+
+</html>

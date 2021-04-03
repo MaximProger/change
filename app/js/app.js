@@ -322,4 +322,66 @@ document.addEventListener("DOMContentLoaded", function () {
       openPopup(faqPopup);
     });
   }
+
+  // Показать пароль
+  const popupShowBtns = document.querySelectorAll(".popup__input__show");
+  if (popupShowBtns) {
+    popupShowBtns.forEach((popupShowBtn) => {
+      popupShowBtn.addEventListener("click", () => {
+        const popupInputItem = findAncestor(popupShowBtn, "popup__input__item");
+        popupInputItem.classList.toggle("popup__input__item--password");
+      });
+    });
+  }
+
+  const avatarInput = document.getElementById("avatar");
+  const outImage = document.querySelector(".custom__file__outimg");
+  const filePlug = document.querySelector(".custom__file__plug");
+
+  if (avatarInput) {
+    avatarInput.onchange = function (evt) {
+      var tgt = evt.target || window.event.srcElement,
+        files = tgt.files;
+
+      // FileReader support
+      if (FileReader && files && files.length) {
+        var fr = new FileReader();
+        fr.onload = function () {
+          outImage.src = fr.result;
+        };
+        fr.readAsDataURL(files[0]);
+        filePlug.classList.add("custom__file__plug--active");
+      }
+    };
+  }
+
+  // Кнопка копировать
+  const copyBtn = document.querySelector(".cabinet__top__copy");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      const currentCopyItem = findAncestor(
+        copyBtn,
+        "cabinet__top__value--copy"
+      );
+      const currentText = currentCopyItem.querySelector(
+        ".cabinet__copy__input"
+      );
+      currentText.select();
+      document.execCommand("copy");
+    });
+  }
+
+  if (window.innerWidth <= 767 && document.querySelector("#cabinetVisit")) {
+    new Glider(document.querySelector("#cabinetVisit"), {
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      draggable: true,
+      dots: false,
+      arrows: {
+        prev: ".cabinet__programm__arrow--prev",
+        next: ".cabinet__programm__arrow--next",
+      },
+    });
+  }
 });
