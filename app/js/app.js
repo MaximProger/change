@@ -436,7 +436,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const addReviewBtn = document.querySelector("#addReview");
-  if (addReview) {
+  if (addReviewBtn) {
     addReview.addEventListener("click", (evt) => {
       evt.preventDefault();
       const reviewPopup = document.querySelector("#popupExchenger");

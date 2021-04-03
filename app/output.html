@@ -6,9 +6,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap Grid -->
-  <link rel="stylesheet" href="./css/include/bootstrap-grid.min.css">
-
   <!-- Glider CSS -->
   <link rel="stylesheet" href="./css/include/glider.min.css">
 
@@ -28,7 +25,7 @@
             <span></span>
           </button>
           <a href="/" class="header__logo">
-            <img src="./images/dest/header/logo.svg" alt="Change">
+            <img loading="lazy" src="./images/dest/header/logo.svg" alt="Change">
           </a>
         </div>
         <div class="header__center">
@@ -36,32 +33,32 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="/" class="nav__link nav__link--active">
                   Мониторинг
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link nav__link--active">
+                <a href="./exchanger.html" class="nav__link">
                   Обменники
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="./converter.html" class="nav__link">
                   Конвертер валют
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="./news.html" class="nav__link">
                   Новости
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="./faq.html" class="nav__link">
                   FAQ
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="./contacts.html" class="nav__link">
                   Контакты
                 </a>
               </li>
@@ -88,11 +85,14 @@
           </div>
         </div>
         <div class="header__right">
-          <button class="header__add__btn">
-            <img src="./images/dest/header/add.svg" alt="add">
-          </button>
-          <a href="#" class="header__user">
-            <img src="./images/dest/header/avatar.png" alt="avatar" class="header__user__avatar">
+          <a href="./addition.html" class="header__add__btn" id="add">
+            <img loading="lazy" src="./images/dest/header/add.svg" alt="add">
+          </a>
+          <a href="./cabinet.html" class="header__user">
+            <picture decoding="async">
+              <source type="image/webp" srcset="./images/dest/header/avatar.webp">
+              <img loading="lazy" src="./images/dest/header/avatar.png" alt="avatar" class="header__user__avatar">
+            </picture>
           </a>
         </div>
       </div>
@@ -108,7 +108,7 @@
         <div class="news__list__wrapper">
           <div class="news__list__inner" id="newsListSlider">
             <div class="news__list__item">
-              <img src="./images/dest/news__list/1.png" alt="news" class="news__list__img">
+              <img loading="lazy" src="./images/dest/news__list/1.png" alt="news" class="news__list__img">
               <div class="news__list__content">
                 <span class="news__list__date">
                   29.03.2021
@@ -131,7 +131,7 @@
             </div>
 
             <div class="news__list__item">
-              <img src="./images/dest/news__list/2.png" alt="news" class="news__list__img">
+              <img loading="lazy" src="./images/dest/news__list/2.png" alt="news" class="news__list__img">
               <div class="news__list__content">
                 <span class="news__list__date">
                   29.03.2021
@@ -154,7 +154,7 @@
             </div>
 
             <div class="news__list__item">
-              <img src="./images/dest/news__list/3.png" alt="news" class="news__list__img">
+              <img loading="lazy" src="./images/dest/news__list/3.png" alt="news" class="news__list__img">
               <div class="news__list__content">
                 <span class="news__list__date">
                   29.03.2021
@@ -177,7 +177,7 @@
             </div>
 
             <div class="news__list__item">
-              <img src="./images/dest/news__list/1.png" alt="news" class="news__list__img">
+              <img loading="lazy" src="./images/dest/news__list/1.png" alt="news" class="news__list__img">
               <div class="news__list__content">
                 <span class="news__list__date">
                   29.03.2021
@@ -200,7 +200,7 @@
             </div>
 
             <div class="news__list__item">
-              <img src="./images/dest/news__list/2.png" alt="news" class="news__list__img">
+              <img loading="lazy" src="./images/dest/news__list/2.png" alt="news" class="news__list__img">
               <div class="news__list__content">
                 <span class="news__list__date">
                   29.03.2021
@@ -223,7 +223,7 @@
             </div>
 
             <div class="news__list__item">
-              <img src="./images/dest/news__list/3.png" alt="news" class="news__list__img">
+              <img loading="lazy" src="./images/dest/news__list/3.png" alt="news" class="news__list__img">
               <div class="news__list__content">
                 <span class="news__list__date">
                   29.03.2021
@@ -246,10 +246,10 @@
             </div>
           </div>
           <button class="news__list__arrow news__list__arrow--prev">
-            <img src="./images/dest/news__list/arrow.svg" alt="prev">
+            <img loading="lazy" src="./images/dest/news__list/arrow.svg" alt="prev">
           </button>
           <button class="news__list__arrow news__list__arrow--next">
-            <img src="./images/dest/news__list/arrow.svg" alt="next">
+            <img loading="lazy" src="./images/dest/news__list/arrow.svg" alt="next">
           </button>
         </div>
 
@@ -325,7 +325,8 @@
                     </span>
 
 
-                    <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+                    <img loading="lazy" src="./images/dest/icons/arrow__select.svg" alt="arrow"
+                      class="exchange__select__arrow">
 
                   </div>
 
@@ -378,7 +379,8 @@
                     </span>
 
 
-                    <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+                    <img loading="lazy" src="./images/dest/icons/arrow__select.svg" alt="arrow"
+                      class="exchange__select__arrow">
 
                   </div>
 
@@ -431,7 +433,7 @@
                 </div>
 
                 <a href="#" class="btn btn--flex tabs__filter__btn">
-                  <img class="btn__icon" src="./images/dest/tabs/apply.svg" alt="apply">
+                  <img loading="lazy" class="btn__icon" src="./images/dest/tabs/apply.svg" alt="apply">
                   Применить
                 </a>
               </div>
@@ -455,12 +457,12 @@
 
                 <div class="trade__head__item trade__head__item--give trade__head__item--icon">
                   Отдаете
-                  <img src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
+                  <img loading="lazy" src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
                 </div>
 
                 <div class="trade__head__item trade__head__item--get trade__head__item--icon">
                   Получаете
-                  <img src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
+                  <img loading="lazy" src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
                 </div>
 
                 <div class="trade__head__item trade__head__item--reserve">
@@ -823,7 +825,7 @@
               Вывод средств
             </h3>
             <button type="button" class="popup__close">
-              <img src="./images/dest/icons/popup__close.svg" alt="close">
+              <img loading="lazy" src="./images/dest/icons/popup__close.svg" alt="close">
             </button>
           </div>
         </div>
@@ -856,7 +858,7 @@
             Персональные настройки
           </h3>
           <button type="button" class="popup__close">
-            <img src="./images/dest/icons/popup__close.svg" alt="close">
+            <img loading="lazy" src="./images/dest/icons/popup__close.svg" alt="close">
           </button>
         </div>
         <div class="popup__body">
@@ -879,7 +881,8 @@
                 </span>
 
 
-                <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+                <img loading="lazy" src="./images/dest/icons/arrow__select.svg" alt="arrow"
+                  class="exchange__select__arrow">
 
               </div>
 
@@ -932,7 +935,8 @@
                 </span>
 
 
-                <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+                <img loading="lazy" src="./images/dest/icons/arrow__select.svg" alt="arrow"
+                  class="exchange__select__arrow">
 
               </div>
 
@@ -976,7 +980,8 @@
                 </span>
 
 
-                <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+                <img loading="lazy" src="./images/dest/icons/arrow__select.svg" alt="arrow"
+                  class="exchange__select__arrow">
 
               </div>
 
@@ -1012,7 +1017,8 @@
                 </span>
 
 
-                <img src="./images/dest/icons/arrow__select.svg" alt="arrow" class="exchange__select__arrow">
+                <img loading="lazy" src="./images/dest/icons/arrow__select.svg" alt="arrow"
+                  class="exchange__select__arrow">
 
               </div>
 

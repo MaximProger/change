@@ -6,9 +6,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap Grid -->
-  <link rel="stylesheet" href="./css/include/bootstrap-grid.min.css">
-
   <!-- Glider CSS -->
   <link rel="stylesheet" href="./css/include/glider.min.css">
 
@@ -28,7 +25,7 @@
             <span></span>
           </button>
           <a href="/" class="header__logo">
-            <img src="./images/dest/header/logo.svg" alt="Change">
+            <img loading="lazy" src="./images/dest/header/logo.svg" alt="Change">
           </a>
         </div>
         <div class="header__center">
@@ -36,32 +33,32 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="/" class="nav__link">
+                <a href="/" class="nav__link nav__link--active">
                   Мониторинг
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="./exchanger.html" class="nav__link">
                   Обменники
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="./converter.html" class="nav__link">
                   Конвертер валют
                 </a>
               </li>
               <li class="nav__item">
-                <a href="./news.html" class="nav__link nav__link--active">
+                <a href="./news.html" class="nav__link">
                   Новости
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="./faq.html" class="nav__link">
                   FAQ
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="./contacts.html" class="nav__link">
                   Контакты
                 </a>
               </li>
@@ -88,11 +85,17 @@
           </div>
         </div>
         <div class="header__right">
-          <button class="header__add__btn">
-            <img src="./images/dest/header/add.svg" alt="add">
-          </button>
-          <a href="#" class="header__user">
-            <img src="./images/dest/header/avatar.png" alt="avatar" class="header__user__avatar">
+          <a href="./addition.html" class="header__add__btn" id="add">
+            <img loading="lazy" src="./images/dest/header/add.svg" alt="add">
+          </a>
+          <a href="./cabinet.html" class="header__user">
+            <picture decoding="async">
+              <source type="image/webp" srcset="./images/dest/header/avatar.webp">
+              <picture decoding="async">
+                <source type="image/webp" srcset="./images/dest/header/avatar.webp">
+                <img loading="lazy" src="./images/dest/header/avatar.png" alt="avatar" class="header__user__avatar">
+              </picture>
+            </picture>
           </a>
         </div>
       </div>
@@ -144,7 +147,7 @@
               <div class="cabinet__top__left">
 
                 <div class="cabinet__top__wrapper">
-                  <img src="./images/dest/pages/avatar.png" alt="avatar" class="cabinet__avatar">
+                  <img loading="lazy" src="./images/dest/pages/avatar.png" alt="avatar" class="cabinet__avatar">
 
                   <div class="cabinet__top__item">
 
@@ -278,10 +281,10 @@
                 </div>
 
                 <button class="cabinet__programm__arrow cabinet__programm__arrow--prev">
-                  <img src="./images/dest/news__list/arrow.svg" alt="prev">
+                  <img loading="lazy" src="./images/dest/news__list/arrow.svg" alt="prev">
                 </button>
                 <button class="cabinet__programm__arrow cabinet__programm__arrow--next">
-                  <img src="./images/dest/news__list/arrow.svg" alt="next">
+                  <img loading="lazy" src="./images/dest/news__list/arrow.svg" alt="next">
                 </button>
 
               </div>
@@ -326,12 +329,12 @@
 
                   <div class="trade__head__item trade__head__item--give trade__head__item--icon">
                     Отдаете
-                    <img src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
+                    <img loading="lazy" src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
                   </div>
 
                   <div class="trade__head__item trade__head__item--get trade__head__item--icon">
                     Получаете
-                    <img src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
+                    <img loading="lazy" src="./images/dest/trade/arrow.svg" alt="arrow" class="trade__head__icon">
                   </div>
 
                   <div class="trade__head__item trade__head__item--reserve">
