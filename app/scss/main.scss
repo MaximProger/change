@@ -29,11 +29,16 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background-color: $gray2;
+  height: 100%;
 
   &.fixed {
     overflow-y: hidden;
     height: 100vh;
   }
+}
+
+.main {
+  min-height: calc(100vh - 224px);
 }
 
 strong {
@@ -702,6 +707,10 @@ strong {
 // List END
 
 @media (max-width: $tablet) {
+  .main {
+    min-height: calc(100vh - 242px);
+  }
+
   // Titles
   .title_1 {
     font-size: 32px;
