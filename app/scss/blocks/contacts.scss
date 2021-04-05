@@ -77,10 +77,6 @@
     line-height: 17px;
     font-weight: normal;
     color: $text2;
-
-    .link {
-      margin-left: 3px;
-    }
   }
 }
 
@@ -133,9 +129,9 @@
 @media (max-width: $mobile) {
   .contacts__checkbox__item {
     .custom__checkbox__label {
+      text-align: left;
       width: 100%;
       .link {
-        white-space: pre-line;
         text-align: right;
       }
     }
